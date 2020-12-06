@@ -1,0 +1,23 @@
+.hide-player-ui #logo{
+    display: none;
+}
+
+.hide-player-ui #navigation{
+    display: none;
+}
+
+.hide-player-ui #controls{
+    display: none;
+}
+
+.hide-player-ui #sidebar{
+    display: none;
+}
+
+.hide-player-ui #players{
+    display: none;
+}
+
+.hide-player-ui #hotbar{
+    display: none;
+}

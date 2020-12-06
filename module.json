@@ -1,0 +1,10 @@
+{
+    "name": "hide-player-ui",
+    "title": "Hide Player UI",
+    "description": "Hides all player joining player control UI so that only the map is displayed",
+    "author": "GS",
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.5.0",
+    "scripts": ["scripts/hide-player-ui.js"],
+    "styles": ["styles/hide-player-ui.css"]
+  }
