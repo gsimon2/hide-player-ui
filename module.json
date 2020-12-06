@@ -3,9 +3,11 @@
     "title": "Hide Player UI",
     "description": "Hides all joining player control UI so that only the map is displayed. The intended use for this is when the player screen is being used for displaying the maps during in-person gaming.",
     "author": "GS",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "download": "https://github.com/gsimon2/hide-player-ui/archive/1.0.1.zip",
     "url": "https://github.com/gsimon2/hide-player-ui",
     "minimumCoreVersion": "0.5.0",
     "scripts": ["scripts/hide-player-ui.js"],
     "styles": ["styles/hide-player-ui.css"]
+    
   }
