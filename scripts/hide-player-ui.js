@@ -11,7 +11,7 @@ Hooks.on('init', () => {
 
 Hooks.on('canvasInit', () => {
     if (game.user.isGM === false && game.settings.get('hide-player-ui', 'hidePlayerUI')) {
-        var rootElement = document.getElementsByClassName('vtt game system-pf2e')[0];
+        var rootElement = document.getElementsByClassName('vtt game')[0];
         rootElement.classList.add('hide-player-ui');
     }
 })
