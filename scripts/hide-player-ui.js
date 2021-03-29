@@ -5,7 +5,19 @@ Hooks.on('init', () => {
 });
 
 Hooks.on('ready', () => {
-    if (game.user.isGM === false && game.settings.get('hide-player-ui', 'hidePlayerUI')) {
+    const playerName = game.user.data.name;
+    var hiddenPlayersList = [];
+
+    if (!game.settings.get('hide-player-ui', 'hideForAllPlayers')) {
+        try {
+            hiddenPlayersList = game.settings.get('hide-player-ui', 'hiddenPlayers').split(',');
+        } catch (e) {
+            console.error('hide-player-ui: Failed to parse list of players to hide UI for!', e);
+        }
+    }
+
+    const isUiHidenForPlayer = game.user.isGM === false && (game.settings.get('hide-player-ui', 'hideForAllPlayers') || hiddenPlayersList.includes(playerName));
+    if (isUiHidenForPlayer) {
         const settings = game.settings.get('hide-player-ui', 'settings');
 
         if (settings.hideLogo) {
