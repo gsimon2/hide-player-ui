@@ -1,0 +1,21 @@
+{
+    "hide-player-ui.setting-form-title": "Hide Player UI Configuration",
+    "hide-player-ui.setting-form-hint": "Configuration menu for which elements to show / hide.",
+    "hide-player-ui.save": "Save Changes",
+    "hide-player-ui.reset": "Reset Defaults",
+    "hide-player-ui.setting-form-hide-logo-label": "Hide Foundry logo",
+    "hide-player-ui.setting-form-hide-logo-notes": "Hides Foundry logo in upper left corner of the screen",
+    "hide-player-ui.setting-form-hide-navigation-label": "Hide navigation tiles",
+    "hide-player-ui.setting-form-hide-navigation-notes": "Hides navigation tiles across top of screen",
+    "hide-player-ui.setting-form-hide-controls-label": "Hide Controls",
+    "hide-player-ui.setting-form-hide-controls-notes": "Hides player controls across left of screen",
+    "hide-player-ui.setting-form-hide-sidebar-label": "Hide Sidebar",
+    "hide-player-ui.setting-form-hide-sidebar-notes": "Hides sidebar across right of screen",
+    "hide-player-ui.setting-form-hide-players-label": "Hide Active Plavers",
+    "hide-player-ui.setting-form-hide-players-notes": "Hides active players display in bottom left of screen",
+    "hide-player-ui.setting-form-hide-hotbar-label": "Hide Hotbar",
+    "hide-player-ui.setting-form-hide-hotbar-notes": "Hides hotbar across bottom of screen",
+    "hide-player-ui.setting-form-hide-player-config-label": "Hide Player Configuration",
+    "hide-player-ui.setting-form-hide-player-config-notes": "Hides player configuration popup",
+    "hide-player-ui.setting-form-refresh-player-sessions": "Player sessions will have to be refreshed for these changes to take effect."
+}

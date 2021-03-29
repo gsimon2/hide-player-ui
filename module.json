@@ -6,8 +6,15 @@
     "version": "1.0.3",
     "minimumCoreVersion": "0.7.0",
     "compatibleCoreVersion": "0.7.9",
-    "scripts": ["scripts/hide-player-ui.js"],
+    "esmodules": ["scripts/hide-player-ui.js"],
     "styles": ["styles/hide-player-ui.css"],
+    "languages": [
+      {
+          "lang": "en",
+          "name": "English",
+          "path": "lang/en.json"
+      }
+    ],
     "url": "https://github.com/gsimon2/hide-player-ui",
     "bugs": "https://github.com/gsimon2/hide-player-ui/issues",
     "changelog": "https://github.com/gsimon2/hide-player-ui/releases",

@@ -1,23 +1,13 @@
-.hide-player-ui #logo{
-    display: none;
+.hide-player-ui-hidden {
+    display: none !important;
 }
 
-.hide-player-ui #navigation{
-    display: none;
+.hide-player-ui.setting-form .form-group {
+    margin-bottom: 0.75rem;
 }
 
-.hide-player-ui #controls{
-    display: none;
-}
-
-.hide-player-ui #sidebar{
-    display: none;
-}
-
-.hide-player-ui #players{
-    display: none;
-}
-
-.hide-player-ui #hotbar{
-    display: none;
+.hide-player-ui.setting-form .warning-note {
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
 }

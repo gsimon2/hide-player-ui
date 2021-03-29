@@ -1,0 +1,60 @@
+<div class="tab active" data-tab="general">
+    <form autocomplete="off" class="hide-player-ui setting-form">
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-logo-label"}}</label>
+            <input type="checkbox" name="hideLogo" data-dtype="Boolean" {{checked hideLogo}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-logo-notes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-navigation-label"}}</label>
+            <input type="checkbox" name="hideNavigation" data-dtype="Boolean" {{checked hideNavigation}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-navigation-notes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-controls-label"}}</label>
+            <input type="checkbox" name="hideControls" data-dtype="Boolean" {{checked hideControls}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-controls-notes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-sidebar-label"}}</label>
+            <input type="checkbox" name="hideSideBar" data-dtype="Boolean" {{checked hideSideBar}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-sidebar-notes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-players-label"}}</label>
+            <input type="checkbox" name="hidePlayers" data-dtype="Boolean" {{checked hidePlayers}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-players-notes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-hotbar-label"}}</label>
+            <input type="checkbox" name="hideHotbar" data-dtype="Boolean" {{checked hideHotbar}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-hotbar-notes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label>{{localize "hide-player-ui.setting-form-hide-player-config-label"}}</label>
+            <input type="checkbox" name="hidePlayerConfig" data-dtype="Boolean" {{checked hidePlayerConfig}}/>
+            <p class="notes">{{localize "hide-player-ui.setting-form-hide-player-config-notes"}}</p>
+        </div>
+
+        <div class="warning-note">
+            <p>{{localize "hide-player-ui.setting-form-refresh-player-sessions"}}</p>
+        </div>
+
+        <div class="form-group" style="margin: 10px;">
+            <button type="submit" name="submit">
+                <i class="fas fa-save"></i> {{localize "hide-player-ui.save"}}
+            </button>
+            <button type="button" name="reset">
+                <i class="fas fa-undo"></i> {{localize "hide-player-ui.reset"}}
+            </button>
+        </div>
+
+    </form>
+</div>
