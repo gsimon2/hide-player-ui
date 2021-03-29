@@ -27,7 +27,6 @@ export class HidePlayerUISettingsForm extends FormApplication {
     }
 
     onReset() {
-        console.log('reset', defaultSettings)
         this.reset = true;
         this.render();
     }
