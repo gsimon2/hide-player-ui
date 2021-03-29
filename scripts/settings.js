@@ -8,7 +8,8 @@ export const defaultSettings = {
     hidePlayers: true,
     hideHotbar: true,
     hidePlayerConfig: true,
-    hideTokenActionHUD: true
+    hideTokenActionHUD: true,
+    hideCustomHotbar: true
 };
 
 export const registerSettings = () => {

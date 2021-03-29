@@ -50,6 +50,14 @@
                 <p class="notes">{{localize "hide-player-ui.setting-form-hide-token-action-hud-notes"}}</p>
             </div>
         {{/if}}
+        
+        {{#if rednerCustomHotbarOption}}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.setting-form-hide-custom-hotbar-label"}}</label>
+                <input type="checkbox" name="hideCustomHotbar" data-dtype="Boolean" {{checked hideCustomHotbar}}/>
+                <p class="notes">{{localize "hide-player-ui.setting-form-hide-custom-hotbar-notes"}}</p>
+            </div>
+        {{/if}}
 
         <div class="warning-note">
             <p>{{localize "hide-player-ui.setting-form-refresh-player-sessions"}}</p>

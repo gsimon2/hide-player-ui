@@ -15,3 +15,11 @@
 .hide-token-action-hud #token-action-hud {
     display: none !important;
 }
+
+.hide-token-custom-hotbar #custom-hotbar {
+    display: none !important;
+}
+
+.hide-token-custom-hotbar #hotbar {
+    display: none !important;
+}

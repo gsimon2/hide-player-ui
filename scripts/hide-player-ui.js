@@ -42,6 +42,11 @@ Hooks.on('ready', () => {
             const element = document.querySelector('body');
             element.classList.add('hide-token-action-hud');
         }
+
+        if (game.modules.get('custom-hotbar') && game.modules.get('custom-hotbar').active && settings.hideCustomHotbar) {
+            const element = document.querySelector('body');
+            element.classList.add('hide-token-custom-hotbar');
+        }
     }
 });
 
