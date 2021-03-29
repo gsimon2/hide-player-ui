@@ -1,17 +1,68 @@
+import {registerSettings} from './settings.js';
+
 Hooks.on('init', () => {
-    game.settings.register("hide-player-ui", "hidePlayerUI", {
-        name: "Hide Player UI",
-        hint: "Enable this to hide all control UI for Players so that they only see the map",
-        scope: "world",
-        config: true,
-        default: true,
-        type: Boolean,
-    });
+    registerSettings();
 });
 
-Hooks.on('canvasInit', () => {
-    if (game.user.isGM === false && game.settings.get('hide-player-ui', 'hidePlayerUI')) {
-        var rootElement = document.getElementsByClassName('vtt game')[0];
-        rootElement.classList.add('hide-player-ui');
+Hooks.on('ready', () => {
+    const playerName = game.user.data.name;
+    var hiddenPlayersList = [];
+
+    if (!game.settings.get('hide-player-ui', 'hideForAllPlayers')) {
+        try {
+            hiddenPlayersList = game.settings.get('hide-player-ui', 'hiddenPlayers').split(',');
+        } catch (e) {
+            console.error('hide-player-ui: Failed to parse list of players to hide UI for!', e);
+        }
     }
-})
+
+    const isUiHidenForPlayer = game.user.isGM === false && (game.settings.get('hide-player-ui', 'hideForAllPlayers') || hiddenPlayersList.includes(playerName));
+    if (isUiHidenForPlayer) {
+        const settings = game.settings.get('hide-player-ui', 'settings');
+
+        if (settings.hideLogo) {
+            hideElement('#logo');
+        }
+
+        if (settings.hideNavigation) {
+            hideElement('#navigation');
+        }
+
+        if (settings.hideControls) {
+            hideElement('#controls');
+        }
+
+        if (settings.hideSideBar) {
+            hideElement('#sidebar');
+        }
+
+        if (settings.hidePlayers) {
+            hideElement('#players');
+        }
+
+        if (settings.hideHotbar) {
+            hideElement('#hotbar');
+        }
+
+        if (settings.hidePlayerConfig) {
+            Hooks.on('renderPlayerConfig', (playerConfig, $html) => {
+                $html.addClass('hide-player-ui-hidden');
+            });
+        }
+
+        if (game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active && settings.hideTokenActionHUD) {
+            const element = document.querySelector('body');
+            element.classList.add('hide-token-action-hud');
+        }
+
+        if (game.modules.get('custom-hotbar') && game.modules.get('custom-hotbar').active && settings.hideCustomHotbar) {
+            const element = document.querySelector('body');
+            element.classList.add('hide-token-custom-hotbar');
+        }
+    }
+});
+
+const hideElement = (querySelector) => {
+    const element = document.querySelector(`.vtt ${querySelector}`);
+    element.classList.add('hide-player-ui-hidden');
+};
