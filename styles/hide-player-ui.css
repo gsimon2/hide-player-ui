@@ -11,3 +11,7 @@
     width: 350px;
     margin: 0 auto;
 }
+
+.hide-token-action-hud #token-action-hud {
+    display: none !important;
+}

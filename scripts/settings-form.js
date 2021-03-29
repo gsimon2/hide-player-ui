@@ -12,7 +12,11 @@ export class HidePlayerUISettingsForm extends FormApplication {
     }
 
     getData(options) {
-        return this.reset ? defaultSettings : game.settings.get('hide-player-ui', 'settings');
+        const moduleSpecificData = {
+            renderTokenActionHudOption: game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active
+        };
+        const data = mergeObject(moduleSpecificData, this.reset ? defaultSettings : game.settings.get('hide-player-ui', 'settings'));
+        return data;
     }
 
     activateListeners(html) {

@@ -37,6 +37,11 @@ Hooks.on('ready', () => {
                 $html.addClass('hide-player-ui-hidden');
             });
         }
+
+        if (game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active && settings.hideTokenActionHUD) {
+            const element = document.querySelector('body');
+            element.classList.add('hide-token-action-hud');
+        }
     }
 });
 

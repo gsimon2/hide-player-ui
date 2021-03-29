@@ -17,5 +17,7 @@
     "hide-player-ui.setting-form-hide-hotbar-notes": "Hides hotbar across bottom of screen",
     "hide-player-ui.setting-form-hide-player-config-label": "Hide Player Configuration",
     "hide-player-ui.setting-form-hide-player-config-notes": "Hides player configuration popup",
+    "hide-player-ui.setting-form-hide-token-action-hud-label": "Hide Token Action HUD",
+    "hide-player-ui.setting-form-hide-token-action-hud-notes": "Hides the token action HUD popup from the Token Action HUD module",
     "hide-player-ui.setting-form-refresh-player-sessions": "Player sessions will have to be refreshed for these changes to take effect."
 }
