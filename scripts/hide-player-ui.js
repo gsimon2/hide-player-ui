@@ -21,27 +21,27 @@ Hooks.on('ready', () => {
         const settings = game.settings.get('hide-player-ui', 'settings');
 
         if (settings.hideLogo) {
-            hideElement('#logo');
+            hideElement('logo');
         }
 
         if (settings.hideNavigation) {
-            hideElement('#navigation');
+            hideElement('navigation');
         }
 
         if (settings.hideControls) {
-            hideElement('#controls');
+            hideElement('controls');
         }
 
         if (settings.hideSideBar) {
-            hideElement('#sidebar');
+            hideElement('sidebar');
         }
 
         if (settings.hidePlayers) {
-            hideElement('#players');
+            hideElement('players');
         }
 
         if (settings.hideHotbar) {
-            hideElement('#hotbar');
+            hideElement('hotbar');
         }
 
         if (settings.hidePlayerConfig) {
@@ -51,18 +51,17 @@ Hooks.on('ready', () => {
         }
 
         if (game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active && settings.hideTokenActionHUD) {
-            const element = document.querySelector('body');
-            element.classList.add('hide-token-action-hud');
+            hideElement('token-action-hud');
         }
 
         if (game.modules.get('custom-hotbar') && game.modules.get('custom-hotbar').active && settings.hideCustomHotbar) {
-            const element = document.querySelector('body');
-            element.classList.add('hide-token-custom-hotbar');
+            const body = document.querySelector('body');
+            body.classList.add('hide-token-custom-hotbar');
         }
     }
 });
 
-const hideElement = (querySelector) => {
-    const element = document.querySelector(`.vtt ${querySelector}`);
-    element.classList.add('hide-player-ui-hidden');
+const hideElement = (id) => {
+    const body = document.querySelector('body');
+    body.classList.add(`hide-player-ui-${id}`);
 };
