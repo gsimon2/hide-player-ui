@@ -97,3 +97,11 @@
 .hide-player-ui .notes-second-line {
     margin-top: -0.75rem;
 }
+
+.hide-player-ui-dynamic-sized-sidebar #sidebar.collapsed {
+    height: auto !important;
+}
+
+.hide-player-ui-dynamic-sized-sidebar #sidebar-tabs {
+    justify-content: flex-end;
+}

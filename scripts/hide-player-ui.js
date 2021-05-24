@@ -44,6 +44,11 @@ Hooks.on('ready', () => {
             settings.hideSideBar.audioPlaylists && hideElement('audioPlaylists');
             settings.hideSideBar.compendiumPacks && hideElement('compendiumPacks');
             settings.hideSideBar.gameSettings && hideElement('gameSettings');
+
+            const body = document.querySelector('body');
+            body.classList.add(`hide-player-ui-dynamic-sized-sidebar`);
+
+            setFocusToFirstDisplayedTab(settings.hideSideBar);
         }
 
         if (settings.hidePlayers) {
@@ -75,3 +80,48 @@ const hideElement = (id) => {
     const body = document.querySelector('body');
     body.classList.add(`hide-player-ui-${id}`);
 };
+
+const setFocusToFirstDisplayedTab = (hideSideBarSettings) => {
+    if (!hideSideBarSettings.chatLog)
+    {
+        return;
+    }
+
+    for(const [key, value] of Object.entries(hideSideBarSettings)) {
+        if (key === "complete") {
+            continue;
+        }
+
+        if (value === false) {
+            switch (key) {
+                case 'chatLog':
+                    document.querySelector('a[data-tab="chat"]').click();
+                    return;
+                case 'combatTracker':
+                    document.querySelector('a[data-tab="combat"]').click();
+                    return;
+                case 'actorsDirectory':
+                    document.querySelector('a[data-tab="actors"]').click();
+                    return;
+                case 'itemsDirectory':
+                    document.querySelector('a[data-tab="items"]').click();
+                    return;
+                case 'journalEntries':
+                    document.querySelector('a[data-tab="journal"]').click();
+                    return;
+                case 'rollableTables':
+                    document.querySelector('a[data-tab="tables"]').click();
+                    return;
+                case 'audioPlaylists':
+                    document.querySelector('a[data-tab="playlists"]').click();
+                    return;
+                case 'compendiumPacks':
+                    document.querySelector('a[data-tab="compendium"]').click();
+                    return;
+                case 'gameSettings':
+                    document.querySelector('a[data-tab="settings"]').click();
+                    return;
+            };
+        }
+    }
+}

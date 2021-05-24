@@ -5,7 +5,7 @@ export const defaultSettings = {
     hideNavigation: true,
     hideControls: true,
     hideSideBar: {
-        complete: false,
+        complete: true,
         chatLog: false,
         combatTracker: false,
         actorsDirectory: false,
