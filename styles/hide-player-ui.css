@@ -1,8 +1,8 @@
-.hide-player-ui.setting-form .form-group {
+.hide-player-ui.settings-form .form-group {
     margin-bottom: 0.75rem;
 }
 
-.hide-player-ui.setting-form .warning-note {
+.hide-player-ui.settings-form .warning-note {
     text-align: center;
     width: 350px;
     margin: 0 auto;
@@ -28,6 +28,42 @@
     display: none !important;
 }
 
+.hide-player-ui-chatLog a[data-tab="chat"] {
+    display: none !important;
+}
+
+.hide-player-ui-combatTracker a[data-tab="combat"] {
+    display: none !important;
+}
+
+.hide-player-ui-actorsDirectory a[data-tab="actors"] {
+    display: none !important;
+}
+
+.hide-player-ui-itemsDirectory a[data-tab="items"] {
+    display: none !important;
+}
+
+.hide-player-ui-journalEntries a[data-tab="journal"] {
+    display: none !important;
+}
+
+.hide-player-ui-rollableTables a[data-tab="tables"] {
+    display: none !important;
+}
+
+.hide-player-ui-audioPlaylists a[data-tab="playlists"] {
+    display: none !important;
+}
+
+.hide-player-ui-compendiumPacks a[data-tab="compendium"] {
+    display: none !important;
+}
+
+.hide-player-ui-gameSettings a[data-tab="settings"] {
+    display: none !important;
+}
+
 .hide-player-ui-players #players {
     display: none !important;
 }
@@ -50,4 +86,14 @@
 
 .hide-token-custom-hotbar #hotbar {
     display: none !important;
+}
+
+.hide-player-ui .sub-option-grouping {
+    margin-left: 1rem;
+    border-left: 1px solid #1c1c1c78;
+    padding-left: 0.5rem;
+}
+
+.hide-player-ui .notes-second-line {
+    margin-top: -0.75rem;
 }

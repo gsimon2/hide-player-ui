@@ -1,29 +1,87 @@
 {
-    "hide-player-ui.setting-form-title": "Hide Player UI Configuration",
-    "hide-player-ui.setting-form-hint": "Configuration menu for which elements to show / hide.",
-    "hide-player-ui.save": "Save Changes",
-    "hide-player-ui.reset": "Reset Defaults",
-    "hide-player-ui.hide-for-all-players-name": "Hide For All Players",
-    "hide-player-ui.hide-for-all-players-hint": "Applies the hidden UI configuration to all players (Not GM).",
-    "hide-player-ui.hidden-players-name": "Player Names With Hidden UI",
-    "hide-player-ui.hidden-players-hint": "Hides the UI for players with these names (Comma seperated list). Overridden by Hide For All Players setting.",
-    "hide-player-ui.setting-form-hide-logo-label": "Hide Foundry logo",
-    "hide-player-ui.setting-form-hide-logo-notes": "Hides Foundry logo in upper left corner of the screen",
-    "hide-player-ui.setting-form-hide-navigation-label": "Hide navigation tiles",
-    "hide-player-ui.setting-form-hide-navigation-notes": "Hides navigation tiles across top of screen",
-    "hide-player-ui.setting-form-hide-controls-label": "Hide Controls",
-    "hide-player-ui.setting-form-hide-controls-notes": "Hides player controls across left of screen",
-    "hide-player-ui.setting-form-hide-sidebar-label": "Hide Sidebar",
-    "hide-player-ui.setting-form-hide-sidebar-notes": "Hides sidebar across right of screen",
-    "hide-player-ui.setting-form-hide-players-label": "Hide Active Plavers",
-    "hide-player-ui.setting-form-hide-players-notes": "Hides active players display in bottom left of screen",
-    "hide-player-ui.setting-form-hide-hotbar-label": "Hide Hotbar",
-    "hide-player-ui.setting-form-hide-hotbar-notes": "Hides hotbar across bottom of screen",
-    "hide-player-ui.setting-form-hide-player-config-label": "Hide Player Configuration",
-    "hide-player-ui.setting-form-hide-player-config-notes": "Hides player configuration popup",
-    "hide-player-ui.setting-form-hide-token-action-hud-label": "Hide Token Action HUD",
-    "hide-player-ui.setting-form-hide-token-action-hud-notes": "Hides the token action HUD popup from the Token Action HUD module",
-    "hide-player-ui.setting-form-hide-custom-hotbar-label": "Hide Custom Hotbar",
-    "hide-player-ui.setting-form-hide-custom-hotbar-notes": "Hides custom hotbar across bottom of screen from the Custom Hotbar module",
-    "hide-player-ui.setting-form-refresh-player-sessions": "Player sessions will have to be refreshed for these changes to take effect."
+    "hide-player-ui": {
+        "settings": {
+            "hide-for-all-players": {
+                "name": "Hide For All Players",
+                "hint": "Applies the hidden UI configuration to all players (Not GM)."
+            },
+            "hidden-players": {
+                "name": "Player Names With Hidden UI",
+                "hint": "Hides the UI for players with these names (Comma seperated list). Overridden by Hide For All Players setting."
+            }
+        },
+        "settings-form": {
+            "title": "Hide Player UI Configuration",
+            "hint": "Configuration menu for which elements to show / hide.",
+            "save": "Save Changes",
+            "reset": "Reset Defaults",
+            "refresh-player-sessions": "Player sessions will have to be refreshed for these changes to take effect.",
+            "hide-logo": {
+                "label": "Hide Foundry logo",
+                "notes": "Hides Foundry logo in upper left corner of the screen"
+            },
+            "hide-navigation": {
+                "label": "Hide navigation tiles",
+                "notes": "Hides navigation tiles across top of screen"
+            },
+            "hide-controls": {
+                "label": "Hide Controls",
+                "notes": "Hides player controls across left of screen"
+            },
+            "hide-sidebar": {
+                "sub-options-label": "Or hide specific tabs of the sidebar - Overridden by Hide Sidebar setting",
+                "complete": {
+                    "label": "Hide Sidebar",
+                    "notes": "Hides the whole sidebar across right of screen"
+                },
+                "chatLog": {
+                    "label": "Hide Chat Log"
+                },
+                "combatTracker": {
+                    "label": "Hide Combat Tracker"
+                },
+                "actorsDirectory": {
+                    "label": "Hide Actors Directory"
+                },
+                "itemsDirectory": {
+                    "label": "Hide Items Directory"
+                },
+                "journalEntries": {
+                    "label": "Hide Journal Entries"
+                },
+                "rollableTables": {
+                    "label": "Hide Rollable Tables"
+                },
+                "audioPlaylists": {
+                    "label": "Hide Audio Playlists"
+                },
+                "compendiumPacks": {
+                    "label": "Hide Compendium Packs"
+                },
+                "gameSettings": {
+                    "label": "Hide Game Settings"
+                }
+            },
+            "hide-players": {
+                "label": "Hide Active Plavers",
+                "notes": "Hides active players display in bottom left of screen"
+            },
+            "hide-hotbar": {
+                "label": "Hide Hotbar",
+                "notes": "Hides hotbar across bottom of screen"
+            },
+            "hide-player-config": {
+                "label": "Hide Player Configuration",
+                "notes": "Hides player configuration popup"
+            },
+            "hide-token-action-hud": {
+                "label": "Hide Token Action HUD",
+                "notes": "Hides the token action HUD popup from the Token Action HUD module"
+            },
+            "hide-custom-hotbar": {
+                "label": "Hide Custom Hotbar",
+                "notes": "Hides custom hotbar across bottom of screen from the Custom Hotbar module"
+            }
+        }
+    }
 }

@@ -32,8 +32,18 @@ Hooks.on('ready', () => {
             hideElement('controls');
         }
 
-        if (settings.hideSideBar) {
+        if (settings.hideSideBar.complete) {
             hideElement('sidebar');
+        } else {
+            settings.hideSideBar.chatLog && hideElement('chatLog');
+            settings.hideSideBar.combatTracker && hideElement('combatTracker');
+            settings.hideSideBar.actorsDirectory && hideElement('actorsDirectory');
+            settings.hideSideBar.itemsDirectory && hideElement('itemsDirectory');
+            settings.hideSideBar.journalEntries && hideElement('journalEntries');
+            settings.hideSideBar.rollableTables && hideElement('rollableTables');
+            settings.hideSideBar.audioPlaylists && hideElement('audioPlaylists');
+            settings.hideSideBar.compendiumPacks && hideElement('compendiumPacks');
+            settings.hideSideBar.gameSettings && hideElement('gameSettings');
         }
 
         if (settings.hidePlayers) {
