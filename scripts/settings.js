@@ -4,7 +4,18 @@ export const defaultSettings = {
     hideLogo: true,
     hideNavigation: true,
     hideControls: true,
-    hideSideBar: true,
+    hideSideBar: {
+        complete: true,
+        chatLog: false,
+        combatTracker: false,
+        actorsDirectory: false,
+        itemsDirectory: false,
+        journalEntries: false,
+        rollableTables: false,
+        audioPlaylists: false,
+        compendiumPacks: false,
+        gameSettings: false
+    },
     hidePlayers: true,
     hideHotbar: true,
     hidePlayerConfig: true,
@@ -14,9 +25,9 @@ export const defaultSettings = {
 
 export const registerSettings = () => {
     game.settings.registerMenu("hide-player-ui", "hide-player-ui", {
-        name: "hide-player-ui.setting-form-title",
-        label: "hide-player-ui.setting-form-title",
-        hint: "hide-player-ui.setting-form-hint",
+        name: "hide-player-ui.settings-form.title",
+        label: "hide-player-ui.settings-form.title",
+        hint: "hide-player-ui.settings-form.hint",
         icon: "fas fa-cogs",
         type: HidePlayerUISettingsForm,
         restricted: true
@@ -31,8 +42,8 @@ export const registerSettings = () => {
     });
 
     game.settings.register("hide-player-ui", "hideForAllPlayers", {
-        name: "hide-player-ui.hide-for-all-players-name",
-        hint: "hide-player-ui.hide-for-all-players-hint",
+        name: "hide-player-ui.settings.hide-for-all-players.name",
+        hint: "hide-player-ui.settings.hide-for-all-players.hint",
         scope: "world",
         config: true,
         default: true,
@@ -40,8 +51,8 @@ export const registerSettings = () => {
     });
 
     game.settings.register("hide-player-ui", "hiddenPlayers", {
-        name: "hide-player-ui.hidden-players-name",
-        hint: "hide-player-ui.hidden-players-hint",
+        name: "hide-player-ui.settings.hidden-players.name",
+        hint: "hide-player-ui.settings.hidden-players.hint",
         scope: "world",
         config: true,
         default: "",
