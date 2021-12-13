@@ -14,8 +14,10 @@ export class HidePlayerUISettingsForm extends FormApplication {
     getData(options) {
         const moduleSpecificData = {
             renderTokenActionHudOption: game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active,
-            rednerCustomHotbarOption: game.modules.get('custom-hotbar') && game.modules.get('custom-hotbar').active
+            renderCustomHotbarOption: game.modules.get('custom-hotbar') && game.modules.get('custom-hotbar').active,
+            renderBossBarOption: game.modules.get('bossbar') && game.modules.get('bossbar').active
         };
+        console.log(game.modules)
         const data = mergeObject(moduleSpecificData, this.reset ? defaultSettings : game.settings.get('hide-player-ui', 'settings'));
         return data;
     }

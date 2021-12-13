@@ -24,8 +24,12 @@ Hooks.on('ready', () => {
             hideElement('logo');
         }
 
-        if (settings.hideNavigation) {
+        if (settings.hideNavigation.complete) {
             hideElement('navigation');
+        } else {
+            settings.hideNavigation.navToggle && hideElement('navToggle');
+            settings.hideNavigation.sceneList && hideElement('sceneList');
+            settings.hideNavigation.bossBar && hideElement('bossBar');
         }
 
         if (settings.hideControls) {

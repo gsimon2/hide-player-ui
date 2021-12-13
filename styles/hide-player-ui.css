@@ -20,6 +20,18 @@
     display: none !important;
 }
 
+.hide-player-ui-navToggle #nav-toggle {
+    display: none !important;
+}
+
+.hide-player-ui-sceneList #scene-list {
+    display: none !important;
+}
+
+.hide-player-ui-bossBar .bossBar {
+    display: none !important;
+}
+
 .hide-player-ui-controls #controls {
     display: none !important;
 }
