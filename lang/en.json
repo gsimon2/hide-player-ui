@@ -21,8 +21,20 @@
                 "notes": "Hides Foundry logo in upper left corner of the screen"
             },
             "hide-navigation": {
-                "label": "Hide navigation tiles",
-                "notes": "Hides navigation tiles across top of screen"
+                "sub-options-label": "Or hide specific parts of the navigation section - Overridden by Hide Navigation Section setting",
+                "complete": {
+                    "label": "Hide Navigation Section",
+                    "notes": "Hides navigation section across top of screen"
+                },
+                "navToggle": {
+                    "label": "Navigation Toggle"
+                },
+                "sceneList": {
+                    "label": "Scene List"
+                },
+                "bossBar": {
+                    "label": "Boss Bar"
+                }
             },
             "hide-controls": {
                 "label": "Hide Controls",

@@ -2,19 +2,24 @@ import {HidePlayerUISettingsForm} from './settings-form.js';
 
 export const defaultSettings = {
     hideLogo: true,
-    hideNavigation: true,
+    hideNavigation: {
+        complete: true,
+        navToggle: true,
+        sceneList: true,
+        bossBar: true
+    },
     hideControls: true,
     hideSideBar: {
         complete: true,
-        chatLog: false,
-        combatTracker: false,
-        actorsDirectory: false,
-        itemsDirectory: false,
-        journalEntries: false,
-        rollableTables: false,
-        audioPlaylists: false,
-        compendiumPacks: false,
-        gameSettings: false
+        chatLog: true,
+        combatTracker: true,
+        actorsDirectory: true,
+        itemsDirectory: true,
+        journalEntries: true,
+        rollableTables: true,
+        audioPlaylists: true,
+        compendiumPacks: true,
+        gameSettings: true
     },
     hidePlayers: true,
     hideHotbar: true,
