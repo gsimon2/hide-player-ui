@@ -28,6 +28,10 @@
     display: none !important;
 }
 
+.hide-player-ui-sceneList .monks-scene-navigation {
+    display: none !important;
+}
+
 .hide-player-ui-bossBar .bossBar {
     display: none !important;
 }

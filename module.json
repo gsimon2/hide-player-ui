@@ -9,7 +9,7 @@
         "url": "https://github.com/gsimon2"
       }
     ],
-    "version": "1.3.0",
+    "version": "1.3.1",
     "minimumCoreVersion": "0.8.0",
     "compatibleCoreVersion": "0.8.9",
     "esmodules": ["scripts/hide-player-ui.js"],
@@ -24,7 +24,7 @@
     "url": "https://github.com/gsimon2/hide-player-ui",
     "bugs": "https://github.com/gsimon2/hide-player-ui/issues",
     "changelog": "https://github.com/gsimon2/hide-player-ui/releases",
-    "download": "https://github.com/gsimon2/hide-player-ui/releases/download/1.3.0/module.zip",
-    "manifest": "https://github.com/gsimon2/hide-player-ui/releases/download/1.3.0/module.json",
+    "download": "https://github.com/gsimon2/hide-player-ui/releases/download/1.3.1/module.zip",
+    "manifest": "https://github.com/gsimon2/hide-player-ui/releases/download/1.3.1/module.json",
     "readme": "https://raw.githubusercontent.com/gsimon2/hide-player-ui/main/README.md"
   }
