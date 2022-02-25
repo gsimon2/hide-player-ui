@@ -64,9 +64,7 @@ Hooks.on('ready', () => {
         }
 
         if (settings.hidePlayerConfig) {
-            Hooks.on('renderPlayerConfig', (playerConfig, $html) => {
-                $html.addClass('hide-player-ui-hidden');
-            });
+            hideElement('player-config');
         }
 
         if (game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active && settings.hideTokenActionHUD) {
