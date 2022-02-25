@@ -1,4 +1,5 @@
 import {HidePlayerUISettingsForm} from './settings-form.js';
+import {HidePlayerUIPlayerConfigurationForm} from './player-configuration-form.js';
 
 export const defaultSettings = {
     hideLogo: true,
@@ -28,6 +29,34 @@ export const defaultSettings = {
     hideCustomHotbar: true
 };
 
+export const defaultPlayerConfig = {
+    hideLogo: false,
+    hideNavigation: {
+        complete: false,
+        navToggle: false,
+        sceneList: false,
+        bossBar: false
+    },
+    hideControls: false,
+    hideSideBar: {
+        complete: false,
+        chatLog: false,
+        combatTracker: false,
+        actorsDirectory: false,
+        itemsDirectory: false,
+        journalEntries: false,
+        rollableTables: false,
+        audioPlaylists: false,
+        compendiumPacks: false,
+        gameSettings: false
+    },
+    hidePlayers: false,
+    hideHotbar: false,
+    hidePlayerConfig: false,
+    hideTokenActionHUD: false,
+    hideCustomHotbar: false
+};
+
 export const registerSettings = () => {
     game.settings.registerMenu("hide-player-ui", "hide-player-ui", {
         name: "hide-player-ui.settings-form.title",
@@ -38,10 +67,27 @@ export const registerSettings = () => {
         restricted: true
     });
 
+    game.settings.registerMenu("hide-player-ui", "hide-player-ui-player-configuration", {
+        name: "hide-player-ui.settings-form.title",
+        label: "hide-player-ui.settings-form.title",
+        hint: "hide-player-ui.settings-form.hint",
+        icon: "fas fa-cogs",
+        type: HidePlayerUIPlayerConfigurationForm,
+        restricted: false
+    });
+
     game.settings.register("hide-player-ui", "settings", {
         name: "Hide Player UI Settings",
         scope: "world",
         default: defaultSettings,
+        type: Object,
+        config: false
+    });
+
+    game.settings.register("hide-player-ui", "playerConfig", {
+        name: "Hide Player UI Configuration",
+        scope: "client",
+        default: defaultPlayerConfig,
         type: Object,
         config: false
     });
