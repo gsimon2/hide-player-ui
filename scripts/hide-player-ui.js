@@ -52,13 +52,12 @@ Hooks.on('ready', () => {
         const body = document.querySelector('body');
         body.classList.add(`hide-player-ui-dynamic-sized-sidebar`);
 
-        let tabSettings = {};
-
+        let sidebarSettings = {};
         for(const [key, value] of Object.entries(settings.hideSideBar)) {
-            tabSettings[key] = value || playerConfig.hideSideBar[key];
+            sidebarSettings[key] = value || playerConfig.hideSideBar[key];
         }
 
-        setFocusToFirstDisplayedTab(tabSettings);
+        setFocusToFirstDisplayedTab(sidebarSettings);
     }
 
     if (playerConfig.hidePlayers || (isPlayerUiOverridden && settings.hidePlayers)) {

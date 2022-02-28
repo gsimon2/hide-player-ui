@@ -11,8 +11,6 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
         });
     }
 
-
-
     storedData = {
         playerUiOverridden: this.getPlayerUiOverridden(),
         settings: game.settings.get('hide-player-ui', 'settings'),
@@ -68,8 +66,4 @@ Handlebars.registerHelper('logicalOr', function(v1, v2) {
 
 Handlebars.registerHelper('logicalAnd', function(v1, v2) {
     return v1 && v2;
-});
-
-Handlebars.registerHelper('disabled', function(v1) {
-    return v1 ? 'disabled' : null;
 });
