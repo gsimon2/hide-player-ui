@@ -58,22 +58,22 @@ export const defaultPlayerConfig = {
 };
 
 export const registerSettings = () => {
-    game.settings.registerMenu("hide-player-ui", "hide-player-ui", {
-        name: "hide-player-ui.settings-form.title",
-        label: "hide-player-ui.settings-form.title",
-        hint: "hide-player-ui.settings-form.hint",
-        icon: "fas fa-cogs",
-        type: HidePlayerUISettingsForm,
-        restricted: true
-    });
-
     game.settings.registerMenu("hide-player-ui", "hide-player-ui-player-configuration", {
-        name: "hide-player-ui.settings-form.title",
-        label: "hide-player-ui.settings-form.title",
-        hint: "hide-player-ui.settings-form.hint",
+        name: "hide-player-ui.settings-form.hide-personal-ui.title",
+        label: "hide-player-ui.settings-form.hide-personal-ui.title",
+        hint: "hide-player-ui.settings-form.hide-personal-ui.hint",
         icon: "fas fa-cogs",
         type: HidePlayerUIPlayerConfigurationForm,
         restricted: false
+    });
+
+    game.settings.registerMenu("hide-player-ui", "hide-player-ui", {
+        name: "hide-player-ui.settings-form.hide-connecting-players-ui.title",
+        label: "hide-player-ui.settings-form.hide-connecting-players-ui.title",
+        hint: "hide-player-ui.settings-form.hide-connecting-players-ui.hint",
+        icon: "fas fa-cogs",
+        type: HidePlayerUISettingsForm,
+        restricted: true
     });
 
     game.settings.register("hide-player-ui", "settings", {

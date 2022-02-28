@@ -10,7 +10,7 @@
         {{/unless}}
 
         <div>
-            {{#unless settings.hideNavigation.complete}}
+            {{#unless (logicalAnd playerUiOverridden settings.hideNavigation.complete)}}
                 <label>{{localize "hide-player-ui.settings-form.hide-navigation.section-label"}}</label>
             {{/unless}}
 
@@ -49,7 +49,7 @@
         {{/unless}}
 
         <div>
-            {{#unless settings.hideSideBar.complete}}
+            {{#unless (logicalAnd playerUiOverridden settings.hideSideBar.complete)}}
                 <label>{{localize "hide-player-ui.settings-form.hide-sidebar.section-label"}}</label>
             {{/unless}}
 

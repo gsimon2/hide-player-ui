@@ -3,7 +3,7 @@ import {defaultPlayerConfig} from './settings.js';
 export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            title: game.i18n.localize('hide-player-ui.settings-form.title'),
+            title: game.i18n.localize('hide-player-ui.settings-form.hide-personal-ui.title'),
             id: 'hide-player-ui-player-configuration-form',
             template: 'modules/hide-player-ui/templates/player-configuration-form.html',
             width: 500,

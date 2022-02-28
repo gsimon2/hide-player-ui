@@ -11,8 +11,14 @@
             }
         },
         "settings-form": {
-            "title": "Hide Player UI Configuration",
-            "hint": "Configuration menu for which elements to show / hide.",
+            "hide-personal-ui": {
+                "title": "Personal UI Configuration",
+                "hint": "Configuration menu for which elements to show / hide on this screen."
+            },
+            "hide-connecting-players-ui": {
+                "title": "Connecting Player's UI Configuration",
+                "hint": "Configuration menu for which elements to show / hide for connecting players."
+            },
             "save": "Save Changes",
             "reset": "Reset Defaults",
             "refresh-player-sessions": "Player sessions will have to be refreshed for these changes to take effect.",
