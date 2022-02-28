@@ -1,7 +1,7 @@
 {
   "name": "hide-player-ui",
   "title": "Hide Player UI",
-  "description": "Hides all joining player control UI so that only the map is displayed. The intended use for this is when the player screen is being used for displaying the maps during in-person gaming.",
+  "description": "Allows configuration of what Foundry UI should be displayed. This is can set on a per user basis or the GM can override what UI connecting players get to see.",
   "authors": [
     {
       "name": "Glen Simon",
