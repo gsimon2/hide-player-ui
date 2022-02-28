@@ -1,0 +1,173 @@
+<div class="tab active" data-tab="general">
+    <form autocomplete="off" class="hide-player-ui settings-form">
+
+        {{#unless (logicalAnd playerUiOverridden settings.hideLogo) }}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.settings-form.hide-logo.label"}}</label>
+                <input type="checkbox" name="hideLogo" data-dtype="Boolean" {{checked playerConfiguration.hideLogo}} />
+                <p class="notes">{{localize "hide-player-ui.settings-form.hide-logo.notes"}}</p>
+            </div>
+        {{/unless}}
+
+        <div>
+            {{#unless (logicalAnd playerUiOverridden settings.hideNavigation.complete)}}
+                <label>{{localize "hide-player-ui.settings-form.hide-navigation.section-label"}}</label>
+            {{/unless}}
+
+            <div class="sub-option-grouping">
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideNavigation.complete settings.hideNavigation.navToggle)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-navigation.navToggle.label"}}</label>
+                        <input type="checkbox" name="hideNavigation.navToggle" data-dtype="Boolean" {{checked playerConfiguration.hideNavigation.navToggle}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideNavigation.complete settings.hideNavigation.sceneList)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-navigation.sceneList.label"}}</label>
+                        <input type="checkbox" name="hideNavigation.sceneList" data-dtype="Boolean" {{checked playerConfiguration.hideNavigation.sceneList}} />
+                    </div>
+                {{/unless}}
+
+                {{#if renderBossBarOption}}
+                    {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideNavigation.complete settings.hideNavigation.bossBar)) }}
+                        <div class="form-group">
+                            <label>{{localize "hide-player-ui.settings-form.hide-navigation.bossBar.label"}}</label>
+                            <input type="checkbox" name="hideNavigation.bossBar" data-dtype="Boolean" {{checked playerConfiguration.hideNavigation.bossBar}} />
+                        </div>
+                    {{/unless}}
+                {{/if}}
+            </div>
+        </div>
+
+        {{#unless (logicalAnd playerUiOverridden settings.hideControls) }}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.settings-form.hide-controls.label"}}</label>
+                <input type="checkbox" name="hideControls" data-dtype="Boolean" {{checked playerConfiguration.hideControls}} />
+                <p class="notes">{{localize "hide-player-ui.settings-form.hide-controls.notes"}}</p>
+            </div>
+        {{/unless}}
+
+        <div>
+            {{#unless (logicalAnd playerUiOverridden settings.hideSideBar.complete)}}
+                <label>{{localize "hide-player-ui.settings-form.hide-sidebar.section-label"}}</label>
+            {{/unless}}
+
+            <div class="sub-option-grouping">
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.chatLog)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.chatLog.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.chatLog" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.chatLog}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.combatTracker)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.combatTracker.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.combatTracker" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.combatTracker}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.actorsDirectory)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.actorsDirectory.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.actorsDirectory" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.actorsDirectory}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.itemsDirectory)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.itemsDirectory.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.itemsDirectory" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.itemsDirectory}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.journalEntries)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.journalEntries.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.journalEntries" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.journalEntries}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.rollableTables)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.rollableTables.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.rollableTables" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.rollableTables}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.audioPlaylists)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.audioPlaylists.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.audioPlaylists" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.audioPlaylists}} />
+                    </div>
+                {{/unless}}
+
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.compendiumPacks)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.compendiumPacks.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.compendiumPacks" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.compendiumPacks}} />
+                    </div>
+                {{/unless}}
+            </div>
+        </div>
+
+        {{#unless (logicalAnd playerUiOverridden settings.hidePlayers) }}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.settings-form.hide-players.label"}}</label>
+                <input type="checkbox" name="hidePlayers" data-dtype="Boolean" {{checked playerConfiguration.hidePlayers}} />
+                <p class="notes">{{localize "hide-player-ui.settings-form.hide-players.notes"}}</p>
+            </div>
+        {{/unless}}
+
+        {{#unless (logicalAnd playerUiOverridden settings.hideHotbar) }}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.settings-form.hide-hotbar.label"}}</label>
+                <input type="checkbox" name="hideHotbar" data-dtype="Boolean" {{checked playerConfiguration.hideHotbar}} />
+                <p class="notes">{{localize "hide-player-ui.settings-form.hide-hotbar.notes"}}</p>
+            </div>
+        {{/unless}}
+
+        {{#unless (logicalAnd playerUiOverridden settings.hidePlayerConfig) }}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.settings-form.hide-player-config.label"}}</label>
+                <input type="checkbox" name="hidePlayerConfig" data-dtype="Boolean" {{checked playerConfiguration.hidePlayerConfig}} />
+                <p class="notes">{{localize "hide-player-ui.settings-form.hide-player-config.notes"}}</p>
+            </div>
+        {{/unless}}
+
+        {{#if renderTokenActionHudOption}}
+            {{#unless (logicalAnd playerUiOverridden settings.hideTokenActionHUD) }}
+                <div class="form-group">
+                    <label>{{localize "hide-player-ui.settings-form.hide-token-action-hud.label"}}</label>
+                    <input type="checkbox" name="hideTokenActionHUD" data-dtype="Boolean" {{checked playerConfiguration.hideTokenActionHUD}} />
+                    <p class="notes">{{localize "hide-player-ui.settings-form.hide-token-action-hud.notes"}}</p>
+                </div>
+            {{/unless}}
+        {{/if}}
+        
+        {{#if renderCustomHotbarOption}}
+            {{#unless (logicalAnd playerUiOverridden settings.hideCustomHotbar) }}
+                <div class="form-group">
+                    <label>{{localize "hide-player-ui.settings-form.hide-custom-hotbar.label"}}</label>
+                    <input type="checkbox" name="hideCustomHotbar" data-dtype="Boolean" {{checked playerConfiguration.hideCustomHotbar}} />
+                    <p class="notes">{{localize "hide-player-ui.settings-form.hide-custom-hotbar.notes"}}</p>
+                </div>
+            {{/unless}}
+        {{/if}}
+
+        <div class="warning-note">
+            <p>{{localize "hide-player-ui.settings-form.refresh-player-sessions"}}</p>
+        </div>
+
+        <div class="form-group" style="margin: 10px;">
+            <button type="submit" name="submit">
+                <i class="fas fa-save"></i> {{localize "hide-player-ui.settings-form.save"}}
+            </button>
+            <button type="button" name="reset">
+                <i class="fas fa-undo"></i> {{localize "hide-player-ui.settings-form.reset"}}
+            </button>
+        </div>
+    </form>
+</div>
