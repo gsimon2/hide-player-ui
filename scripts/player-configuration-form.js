@@ -3,7 +3,7 @@ import {defaultPlayerConfig} from './settings.js';
 export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            title: game.i18n.localize('hide-player-ui.setting-form.title'),
+            title: game.i18n.localize('hide-player-ui.settings-form.title'),
             id: 'hide-player-ui-player-configuration-form',
             template: 'modules/hide-player-ui/templates/player-configuration-form.html',
             width: 500,
@@ -11,10 +11,28 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
         });
     }
 
+
+
     storedData = {
+        playerUiOverridden: this.getPlayerUiOverridden(),
         settings: game.settings.get('hide-player-ui', 'settings'),
         playerConfiguration: game.settings.get('hide-player-ui', 'playerConfig')
     };
+
+    getPlayerUiOverridden() {
+        const playerName = game.user.data.name;
+        var hiddenPlayersList = [];
+    
+        if (!game.settings.get('hide-player-ui', 'hideForAllPlayers')) {
+            try {
+                hiddenPlayersList = game.settings.get('hide-player-ui', 'hiddenPlayers').split(',');
+            } catch (e) {
+                console.error('hide-player-ui: Failed to parse list of players to hide UI for!', e);
+            }
+        }
+
+        return game.user.isGM === false && (game.settings.get('hide-player-ui', 'hideForAllPlayers') || hiddenPlayersList.includes(playerName));
+    }
 
     getData(options) {
         const moduleSpecificData = {
@@ -46,8 +64,12 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
 
 Handlebars.registerHelper('logicalOr', function(v1, v2) {
     return v1 || v2;
-  });
+});
+
+Handlebars.registerHelper('logicalAnd', function(v1, v2) {
+    return v1 && v2;
+});
 
 Handlebars.registerHelper('disabled', function(v1) {
     return v1 ? 'disabled' : null;
-  });
+});

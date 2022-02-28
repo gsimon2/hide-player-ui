@@ -22,6 +22,7 @@
             },
             "hide-navigation": {
                 "sub-options-label": "Or hide specific parts of the navigation section - Overridden by Hide Navigation Section setting",
+                "section-label": "Navigation Section",
                 "complete": {
                     "label": "Hide Navigation Section",
                     "notes": "Hides navigation section across top of screen"
@@ -42,6 +43,7 @@
             },
             "hide-sidebar": {
                 "sub-options-label": "Or hide specific tabs of the sidebar - Overridden by Hide Sidebar setting",
+                "section-label": "Sidebar Section",
                 "complete": {
                     "label": "Hide Sidebar",
                     "notes": "Hides the whole sidebar across right of screen"
