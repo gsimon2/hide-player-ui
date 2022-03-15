@@ -1,0 +1,107 @@
+{
+    "hide-player-ui": {
+        "settings": {
+            "hide-for-all-players": {
+                "name": "全プレイヤーから隠す",
+                "hint": "非表示にするUIの設定をGMではない全プレイヤーに適用します。"
+            },
+            "hidden-players": {
+                "name": "プレイヤー名を指定して隠す",
+                "hint": "これらの名前を持つプレイヤーのUIを隠します（カンマ区切り）。「全プレイヤーから隠す」設定により上書きされます。"
+            }
+        },
+        "settings-form": {
+            "hide-personal-ui": {
+                "title": "個人のUI設定",
+                "hint": "この画面のUI表示/非表示を設定するメニューです。"
+            },
+            "hide-connecting-players-ui": {
+                "title": "プレイヤーのUI設定",
+                "hint": "プレイヤーが接続した際のUI表示/非表示を設定するメニューです。"
+            },
+            "save": "設定を保存する",
+            "reset": "デフォルトに戻す",
+            "refresh-player-sessions": "設定を有効にするには、プレイヤーセッションを更新する必要があります。",
+            "hide-logo": {
+                "label": "オンセ工房のロゴを隠す",
+                "notes": "スクリーンの左上にあるオンセ工房のロゴを隠す"
+            },
+            "hide-navigation": {
+                "sub-options-label": "または、ナビゲーションセクションの特定の部分を隠す - 「ナビゲーションセクションを隠す」設定により上書きされます。",
+                "section-label": "ナビゲーションセクション",
+                "complete": {
+                    "label": "ナビゲーションセクションを隠す",
+                    "notes": "画面上部のナビゲーションセクションを非表示にする"
+                },
+                "navToggle": {
+                    "label": "ナビゲーショントグル"
+                },
+                "sceneList": {
+                    "label": "シーンリスト"
+                },
+                "bossBar": {
+                    "label": "ボスバー"
+                }
+            },
+            "hide-controls": {
+                "label": "レイヤーコントロールを隠す",
+                "notes": "画面左側のレイヤーコントロールを非表示にする"
+            },
+            "hide-sidebar": {
+                "sub-options-label": "または、サイドバータブの特定の部分を隠す　-　「サイドバーを隠す」設定により上書きされます。",
+                "section-label": "サイドバーセクション",
+                "complete": {
+                    "label": "サイドバーを隠す",
+                    "notes": "画面右側のサイドバー全体を非表示にする"
+                },
+                "chatLog": {
+                    "label": "チャットログを隠す"
+                },
+                "combatTracker": {
+                    "label": "イニシアチブ表を隠す"
+                },
+                "actorsDirectory": {
+                    "label": "キャラクター一覧を隠す"
+                },
+                "itemsDirectory": {
+                    "label": "アイテム一覧を隠す"
+                },
+                "journalEntries": {
+                    "label": "資料一覧を隠す"
+                },
+                "rollableTables": {
+                    "label": "ロール表を隠す"
+                },
+                "audioPlaylists": {
+                    "label": "プレイリスト一覧を隠す"
+                },
+                "compendiumPacks": {
+                    "label": "辞典一覧を隠す"
+                },
+                "gameSettings": {
+                    "label": "ゲーム設定を隠す"
+                }
+            },
+            "hide-players": {
+                "label": "参加メンバーを隠す",
+                "notes": "画面左下のアクティブプレイヤー表示を非表示にする。"
+            },
+            "hide-hotbar": {
+                "label": "ホットバーを隠す",
+                "notes": "画面下部のホットバーを非表示にする"
+            },
+            "hide-player-config": {
+                "label": "ユーザー設定を隠す",
+                "notes": "ユーザー設定のポップアップを隠す"
+            },
+            "hide-token-action-hud": {
+                "label": "トークンアクションHUDを隠す",
+                "notes": "「Token Action HUD」MODからトークンアクションHUDポップアップを非表示にします。"
+            },
+            "hide-custom-hotbar": {
+                "label": "カスタムホットバーを隠す",
+                "notes": "「Custom Hotbar」MODから画面下部のカスタムホットバーを非表示にします。"
+            }
+        }
+    }
+}
