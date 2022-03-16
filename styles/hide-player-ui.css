@@ -92,6 +92,10 @@
     display: none !important;
 }
 
+.hide-player-ui-token-hud #token-hud {
+    display: none !important;
+}
+
 .hide-player-ui-token-action-hud #token-action-hud {
     display: none !important;
 }

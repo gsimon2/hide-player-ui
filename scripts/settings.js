@@ -25,6 +25,7 @@ export const defaultSettings = {
     hidePlayers: true,
     hideHotbar: true,
     hidePlayerConfig: true,
+    hideTokenHUD: false,
     hideTokenActionHUD: true,
     hideCustomHotbar: true
 };
@@ -53,6 +54,7 @@ export const defaultPlayerConfig = {
     hidePlayers: false,
     hideHotbar: false,
     hidePlayerConfig: false,
+    hideTokenHUD: false,
     hideTokenActionHUD: false,
     hideCustomHotbar: false
 };

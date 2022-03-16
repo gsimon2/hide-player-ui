@@ -72,6 +72,10 @@ Hooks.on('ready', () => {
         hideElement('player-config');
     }
 
+    if (playerConfig.hideTokenHUD || (isPlayerUiOverridden && settings.hideTokenHUD)) {
+        hideElement('token-hud');
+    }
+
     if (game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active) {
         if (playerConfig.hideTokenActionHUD || (isPlayerUiOverridden && settings.hideTokenActionHUD)) {
             hideElement('token-action-hud');

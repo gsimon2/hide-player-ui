@@ -94,6 +94,10 @@
                 "label": "Hide Player Configuration",
                 "notes": "Hides player configuration popup"
             },
+            "hide-token-hud": {
+                "label": "Hide Token HUD",
+                "notes": "Hides the token HUD quick actions that appear around a token on the canvas"
+            },
             "hide-token-action-hud": {
                 "label": "Hide Token Action HUD",
                 "notes": "Hides the token action HUD popup from the Token Action HUD module"

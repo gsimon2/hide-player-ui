@@ -94,6 +94,10 @@
                 "label": "ユーザー設定を隠す",
                 "notes": "ユーザー設定のポップアップを隠す"
             },
+            "hide-token-hud": {
+                "label": "Tōkun HUD o hi hyōji",
+                "notes": "キャンバス上のトークンの周囲に表示されるトークンHUDクイックアクションを非表示にします"
+            },
             "hide-token-action-hud": {
                 "label": "トークンアクションHUDを隠す",
                 "notes": "「Token Action HUD」MODからトークンアクションHUDポップアップを非表示にします。"
