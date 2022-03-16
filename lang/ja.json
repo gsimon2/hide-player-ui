@@ -72,6 +72,9 @@
                 "rollableTables": {
                     "label": "ロール表を隠す"
                 },
+                "cardStacks": {
+                    "label": "カードスタックを非表示"
+                },
                 "audioPlaylists": {
                     "label": "プレイリスト一覧を隠す"
                 },

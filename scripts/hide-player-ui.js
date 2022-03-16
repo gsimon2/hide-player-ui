@@ -45,6 +45,7 @@ Hooks.on('ready', () => {
         (playerConfig.hideSideBar.itemsDirectory || (isPlayerUiOverridden && settings.hideSideBar.itemsDirectory)) && hideElement('itemsDirectory');
         (playerConfig.hideSideBar.journalEntries || (isPlayerUiOverridden && settings.hideSideBar.journalEntries)) && hideElement('journalEntries');
         (playerConfig.hideSideBar.rollableTables || (isPlayerUiOverridden && settings.hideSideBar.rollableTables)) && hideElement('rollableTables');
+        (playerConfig.hideSideBar.cardStacks || (isPlayerUiOverridden && settings.hideSideBar.cardStacks)) && hideElement('cardStacks');
         (playerConfig.hideSideBar.audioPlaylists || (isPlayerUiOverridden && settings.hideSideBar.audioPlaylists)) && hideElement('audioPlaylists');
         (playerConfig.hideSideBar.compendiumPacks || (isPlayerUiOverridden && settings.hideSideBar.compendiumPacks)) && hideElement('compendiumPacks');
         (playerConfig.hideSideBar.gameSettings || (isPlayerUiOverridden && settings.hideSideBar.gameSettings)) && hideElement('gameSettings');

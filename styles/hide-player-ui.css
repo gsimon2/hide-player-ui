@@ -68,6 +68,10 @@
     display: none !important;
 }
 
+.hide-player-ui-cardStacks a[data-tab="cards"] {
+    display: none !important;
+}
+
 .hide-player-ui-audioPlaylists a[data-tab="playlists"] {
     display: none !important;
 }

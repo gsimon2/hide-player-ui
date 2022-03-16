@@ -72,6 +72,9 @@
                 "rollableTables": {
                     "label": "Hide Rollable Tables"
                 },
+                "cardStacks": {
+                    "label": "Hide Card Stacks"
+                },
                 "audioPlaylists": {
                     "label": "Hide Audio Playlists"
                 },

@@ -18,6 +18,7 @@ export const defaultSettings = {
         itemsDirectory: true,
         journalEntries: true,
         rollableTables: true,
+        cardStacks: true,
         audioPlaylists: true,
         compendiumPacks: true,
         gameSettings: true
@@ -47,6 +48,7 @@ export const defaultPlayerConfig = {
         itemsDirectory: false,
         journalEntries: false,
         rollableTables: false,
+        cardStacks: false,
         audioPlaylists: false,
         compendiumPacks: false,
         gameSettings: false

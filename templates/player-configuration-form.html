@@ -97,6 +97,13 @@
                     </div>
                 {{/unless}}
 
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.cardStacks)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.cardStacks.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.cardStacks" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.cardStacks}} />
+                    </div>
+                {{/unless}}
+
                 {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.audioPlaylists)) }}
                     <div class="form-group">
                         <label>{{localize "hide-player-ui.settings-form.hide-sidebar.audioPlaylists.label"}}</label>
