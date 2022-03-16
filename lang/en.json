@@ -72,6 +72,9 @@
                 "rollableTables": {
                     "label": "Hide Rollable Tables"
                 },
+                "cardStacks": {
+                    "label": "Hide Card Stacks"
+                },
                 "audioPlaylists": {
                     "label": "Hide Audio Playlists"
                 },
@@ -93,6 +96,10 @@
             "hide-player-config": {
                 "label": "Hide Player Configuration",
                 "notes": "Hides player configuration popup"
+            },
+            "hide-token-hud": {
+                "label": "Hide Token HUD",
+                "notes": "Hides the token HUD quick actions that appear around a token on the canvas"
             },
             "hide-token-action-hud": {
                 "label": "Hide Token Action HUD",

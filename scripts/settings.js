@@ -18,6 +18,7 @@ export const defaultSettings = {
         itemsDirectory: true,
         journalEntries: true,
         rollableTables: true,
+        cardStacks: true,
         audioPlaylists: true,
         compendiumPacks: true,
         gameSettings: true
@@ -25,6 +26,7 @@ export const defaultSettings = {
     hidePlayers: true,
     hideHotbar: true,
     hidePlayerConfig: true,
+    hideTokenHUD: false,
     hideTokenActionHUD: true,
     hideCustomHotbar: true
 };
@@ -46,6 +48,7 @@ export const defaultPlayerConfig = {
         itemsDirectory: false,
         journalEntries: false,
         rollableTables: false,
+        cardStacks: false,
         audioPlaylists: false,
         compendiumPacks: false,
         gameSettings: false
@@ -53,6 +56,7 @@ export const defaultPlayerConfig = {
     hidePlayers: false,
     hideHotbar: false,
     hidePlayerConfig: false,
+    hideTokenHUD: false,
     hideTokenActionHUD: false,
     hideCustomHotbar: false
 };

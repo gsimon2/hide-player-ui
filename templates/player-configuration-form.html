@@ -97,6 +97,13 @@
                     </div>
                 {{/unless}}
 
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.cardStacks)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.cardStacks.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.cardStacks" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.cardStacks}} />
+                    </div>
+                {{/unless}}
+
                 {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.audioPlaylists)) }}
                     <div class="form-group">
                         <label>{{localize "hide-player-ui.settings-form.hide-sidebar.audioPlaylists.label"}}</label>
@@ -134,6 +141,14 @@
                 <label>{{localize "hide-player-ui.settings-form.hide-player-config.label"}}</label>
                 <input type="checkbox" name="hidePlayerConfig" data-dtype="Boolean" {{checked playerConfiguration.hidePlayerConfig}} />
                 <p class="notes">{{localize "hide-player-ui.settings-form.hide-player-config.notes"}}</p>
+            </div>
+        {{/unless}}
+
+        {{#unless (logicalAnd playerUiOverridden settings.hideTokenHUD) }}
+            <div class="form-group">
+                <label>{{localize "hide-player-ui.settings-form.hide-token-hud.label"}}</label>
+                <input type="checkbox" name="hideTokenHUD" data-dtype="Boolean" {{checked playerConfiguration.hideTokenHUD}}/>
+                <p class="notes">{{localize "hide-player-ui.settings-form.hide-token-hud.notes"}}</p>
             </div>
         {{/unless}}
 

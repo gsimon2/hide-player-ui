@@ -72,6 +72,9 @@
                 "rollableTables": {
                     "label": "ロール表を隠す"
                 },
+                "cardStacks": {
+                    "label": "カードスタックを非表示"
+                },
                 "audioPlaylists": {
                     "label": "プレイリスト一覧を隠す"
                 },
@@ -93,6 +96,10 @@
             "hide-player-config": {
                 "label": "ユーザー設定を隠す",
                 "notes": "ユーザー設定のポップアップを隠す"
+            },
+            "hide-token-hud": {
+                "label": "Tōkun HUD o hi hyōji",
+                "notes": "キャンバス上のトークンの周囲に表示されるトークンHUDクイックアクションを非表示にします"
             },
             "hide-token-action-hud": {
                 "label": "トークンアクションHUDを隠す",
