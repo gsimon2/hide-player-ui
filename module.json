@@ -16,7 +16,7 @@
   "flags": {},
   "version": "1.4.0",
   "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9.249",
+  "compatibleCoreVersion": "9.255",
   "scripts": [],
   "esmodules": [
     "scripts/hide-player-ui.js"
