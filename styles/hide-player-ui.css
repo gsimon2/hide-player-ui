@@ -48,6 +48,10 @@
     display: none !important;
 }
 
+nav#sidebar-tabs.tabs {
+	justify-content: space-evenly;	
+}
+
 .hide-player-ui-combatTracker a[data-tab="combat"] {
     display: none !important;
 }
