@@ -127,5 +127,5 @@
 }
 
 .hide-player-ui-dynamic-sized-sidebar #sidebar-tabs {
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
