@@ -1,69 +1,92 @@
-import {defaultPlayerConfig} from './settings.js';
+import { defaultPlayerConfig } from "./settings.js";
 
 export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
-    static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
-            title: game.i18n.localize('hide-player-ui.settings-form.hide-personal-ui.title'),
-            id: 'hide-player-ui-player-configuration-form',
-            template: 'modules/hide-player-ui/templates/player-configuration-form.html',
-            width: 500,
-            closeOnSubmit: true
-        });
-    }
+   static get defaultOptions() {
+      return mergeObject(super.defaultOptions, {
+         title: game.i18n.localize(
+            "hide-player-ui.settings-form.hide-personal-ui.title"
+         ),
+         id: "hide-player-ui-player-configuration-form",
+         template:
+            "modules/hide-player-ui/templates/player-configuration-form.html",
+         width: 500,
+         closeOnSubmit: true,
+      });
+   }
 
-    storedData = {
-        playerUiOverridden: this.getPlayerUiOverridden(),
-        settings: game.settings.get('hide-player-ui', 'settings'),
-        playerConfiguration: game.settings.get('hide-player-ui', 'playerConfig')
-    };
+   storedData = {
+      playerUiOverridden: this.getPlayerUiOverridden(),
+      settings: game.settings.get("hide-player-ui", "settings"),
+      playerConfiguration: game.settings.get("hide-player-ui", "playerConfig"),
+   };
 
-    getPlayerUiOverridden() {
-        const playerName = game.user.data.name;
-        var hiddenPlayersList = [];
-    
-        if (!game.settings.get('hide-player-ui', 'hideForAllPlayers')) {
-            try {
-                hiddenPlayersList = game.settings.get('hide-player-ui', 'hiddenPlayers').split(',');
-            } catch (e) {
-                console.error('hide-player-ui: Failed to parse list of players to hide UI for!', e);
-            }
-        }
+   getPlayerUiOverridden() {
+      const playerName = game.user.data.name;
+      var hiddenPlayersList = [];
 
-        return game.user.isGM === false && (game.settings.get('hide-player-ui', 'hideForAllPlayers') || hiddenPlayersList.includes(playerName));
-    }
+      if (!game.settings.get("hide-player-ui", "hideForAllPlayers")) {
+         try {
+            hiddenPlayersList = game.settings
+               .get("hide-player-ui", "hiddenPlayers")
+               .split(",");
+         } catch (e) {
+            console.error(
+               "hide-player-ui: Failed to parse list of players to hide UI for!",
+               e
+            );
+         }
+      }
 
-    getData(options) {
-        const moduleSpecificData = {
-            renderTokenActionHudOption: game.modules.get('token-action-hud') && game.modules.get('token-action-hud').active,
-            renderCustomHotbarOption: game.modules.get('custom-hotbar') && game.modules.get('custom-hotbar').active,
-            renderBossBarOption: game.modules.get('bossbar') && game.modules.get('bossbar').active
-        };
+      return (
+         game.user.isGM === false &&
+         (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
+            hiddenPlayersList.includes(playerName))
+      );
+   }
 
-        const data = mergeObject(moduleSpecificData, this.storedData);
-        return data;
-    }
+   getData(options) {
+      const moduleSpecificData = {
+         renderTokenActionHudOption:
+            game.modules.get("token-action-hud") &&
+            game.modules.get("token-action-hud").active,
+         renderCustomHotbarOption:
+            game.modules.get("custom-hotbar") &&
+            game.modules.get("custom-hotbar").active,
+         renderBossBarOption:
+            game.modules.get("bossbar") && game.modules.get("bossbar").active,
+      };
 
-    activateListeners(html) {
-        super.activateListeners(html);
-        html.find('button[name="reset"]').click(this.onReset.bind(this));
-    }
+      const data = mergeObject(moduleSpecificData, this.storedData);
+      return data;
+   }
 
-    onReset() {
-        this.storedData.playerConfiguration = JSON.parse(JSON.stringify(defaultPlayerConfig));
+   activateListeners(html) {
+      super.activateListeners(html);
+      html.find('button[name="reset"]').click(this.onReset.bind(this));
+   }
 
-        this.render();
-    }
+   onReset() {
+      this.storedData.playerConfiguration = JSON.parse(
+         JSON.stringify(defaultPlayerConfig)
+      );
 
-    _updateObject(events, formData) {
-        let configuration = mergeObject(this.storedData.playerConfiguration, formData, {insertKeys: true, insertValues: true});
-        game.settings.set('hide-player-ui', 'playerConfig', configuration);
-    }
-};
+      this.render();
+   }
 
-Handlebars.registerHelper('logicalOr', function(v1, v2) {
-    return v1 || v2;
+   _updateObject(events, formData) {
+      let configuration = mergeObject(
+         this.storedData.playerConfiguration,
+         formData,
+         { insertKeys: true, insertValues: true }
+      );
+      game.settings.set("hide-player-ui", "playerConfig", configuration);
+   }
+}
+
+Handlebars.registerHelper("logicalOr", function (v1, v2) {
+   return v1 || v2;
 });
 
-Handlebars.registerHelper('logicalAnd', function(v1, v2) {
-    return v1 && v2;
+Handlebars.registerHelper("logicalAnd", function (v1, v2) {
+   return v1 && v2;
 });
