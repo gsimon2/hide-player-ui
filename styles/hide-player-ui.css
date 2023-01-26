@@ -88,6 +88,10 @@
     display: none !important;
 }
 
+.hide-player-ui-players #ui-top {
+   margin-left: 10px !important;
+}
+
 .hide-player-ui-hotbar #hotbar {
     display: none !important;
 }
