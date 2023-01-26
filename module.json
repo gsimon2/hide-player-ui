@@ -15,7 +15,7 @@
    "bugs": "https://github.com/gsimon2/hide-player-ui/issues",
    "changelog": "https://github.com/gsimon2/hide-player-ui/releases",
    "flags": {},
-   "version": "1.5.1",
+   "version": "1.5.2",
    "scripts": [],
    "esmodules": ["scripts/hide-player-ui.js"],
    "styles": ["styles/hide-player-ui.css"],
@@ -32,16 +32,14 @@
       }
    ],
    "packs": [],
-   "system": [],
-   "dependencies": [],
    "socket": false,
-   "manifest": "https://github.com/gsimon2/hide-player-ui/releases/download/1.5.1/module.json",
-   "download": "https://github.com/gsimon2/hide-player-ui/releases/download/1.5.1/module.zip",
+   "manifest": "https://github.com/gsimon2/hide-player-ui/releases/download/1.5.2/module.json",
+   "download": "https://github.com/gsimon2/hide-player-ui/releases/download/1.5.2/module.zip",
    "protected": false,
    "coreTranslation": false,
    "library": false,
    "compatibility": {
       "minimum": "10.0",
-      "verified": "10.286"
+      "verified": "10.291"
    }
 }
