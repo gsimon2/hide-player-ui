@@ -16,6 +16,10 @@
     display: none !important;
 }
 
+.hide-player-ui-logo .new-logo {
+   visibility: hidden !important;
+}
+
 .hide-player-ui-navigation #navigation {
     display: none !important;
 }
