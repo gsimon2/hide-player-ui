@@ -21,7 +21,7 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
    };
 
    getPlayerUiOverridden() {
-      const playerName = game.user.data.name;
+      const playerName = game.user.name;
       var hiddenPlayersList = [];
 
       if (!game.settings.get("hide-player-ui", "hideForAllPlayers")) {
