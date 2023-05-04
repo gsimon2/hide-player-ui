@@ -1,10 +1,11 @@
 import { registerSettings } from "./settings.js";
+import { defaultPlayerConfig } from "./settings.js";
 
 Hooks.on("init", () => {
    registerSettings();
 });
 
-Hooks.on("ready", () => {
+Hooks.on("ready", async () => {
    const playerName = game.user.name;
    var hiddenPlayersList = [];
 
@@ -25,8 +26,13 @@ Hooks.on("ready", () => {
       game.user.isGM === false &&
       (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
          hiddenPlayersList.includes(playerName));
-   const settings = game.settings.get("hide-player-ui", "settings");
-   const playerConfig = game.settings.get("hide-player-ui", "playerConfig");
+   const settings = game.settings.get("hide-player-ui", "settings");   
+
+   let playerConfig = game.user.getFlag("hide-player-ui", "playerConfig");
+   if (!playerConfig) {
+        playerConfig = JSON.parse(JSON.stringify(defaultPlayerConfig));
+        await game.user.setFlag("hide-player-ui", "playerConfig", playerConfig);
+   }
 
    if (playerConfig.hideLogo || (isPlayerUiOverridden && settings.hideLogo)) {
       hideElement("logo");
