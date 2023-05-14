@@ -104,7 +104,7 @@ Hooks.on("ready", async () => {
 
       let sidebarSettings = {};
       for (const [key, value] of Object.entries(settings.hideSideBar)) {
-         sidebarSettings[key] = value || playerConfig.hideSideBar[key];
+         sidebarSettings[key] = (isPlayerUiOverridden && value) || playerConfig.hideSideBar[key];
       }
 
       setFocusToFirstDisplayedTab(sidebarSettings);
