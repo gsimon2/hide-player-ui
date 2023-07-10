@@ -15,7 +15,7 @@
    "bugs": "https://github.com/gsimon2/hide-player-ui/issues",
    "changelog": "https://github.com/gsimon2/hide-player-ui/releases",
    "flags": {},
-   "version": "1.5.4",
+   "version": "1.5.5",
    "scripts": [],
    "esmodules": ["scripts/hide-player-ui.js"],
    "styles": ["styles/hide-player-ui.css"],
@@ -40,6 +40,6 @@
    "library": false,
    "compatibility": {
       "minimum": "10.0",
-      "verified": "10.291"
+      "verified": "11"
    }
 }
