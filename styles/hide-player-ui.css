@@ -56,6 +56,10 @@
     display: none !important;
 }
 
+.hide-player-ui-scenesDirectory a[data-tab="scenes"] {
+    display: none !important;
+}
+
 .hide-player-ui-actorsDirectory a[data-tab="actors"] {
     display: none !important;
 }
