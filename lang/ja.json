@@ -5,6 +5,10 @@
                 "name": "全プレイヤーから隠す",
                 "hint": "非表示にするUIの設定をGMではない全プレイヤーに適用します。"
             },
+            "hide-for-assisstant-gm": {
+                "name": "Hide For Assistant GM",
+                "hint": "Applies the hidden UI configuration to assistant GM (Not GM)."
+            },
             "hidden-players": {
                 "name": "プレイヤー名を指定して隠す",
                 "hint": "これらの名前を持つプレイヤーのUIを隠します（カンマ区切り）。「全プレイヤーから隠す」設定により上書きされます。"
