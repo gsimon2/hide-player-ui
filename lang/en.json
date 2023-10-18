@@ -5,6 +5,10 @@
                 "name": "Hide For All Players",
                 "hint": "Applies the hidden UI configuration to all players (Not GM)."
             },
+            "hide-for-assisstant-gm": {
+                "name": "Hide For Assistant GM",
+                "hint": "Applies the hidden UI configuration to assistant GM (Not GM)."
+            },
             "hidden-players": {
                 "name": "Player Names With Hidden UI",
                 "hint": "Hides the UI for players with these names (Comma seperated list). Overridden by Hide For All Players setting."

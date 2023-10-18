@@ -109,6 +109,15 @@ export const registerSettings = () => {
       type: Boolean,
    });
 
+   game.settings.register("hide-player-ui", "hideForAssistantGM", {
+      name: "hide-player-ui.settings.hide-for-assisstant-gm.name",
+      hint: "hide-player-ui.settings.hide-for-assisstant-gm.hint",
+      scope: "world",
+      config: true,
+      default: false,
+      type: Boolean,
+   });
+
    game.settings.register("hide-player-ui", "hiddenPlayers", {
       name: "hide-player-ui.settings.hidden-players.name",
       hint: "hide-player-ui.settings.hidden-players.hint",

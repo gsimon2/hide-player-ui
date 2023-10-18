@@ -1,4 +1,5 @@
 import { registerSettings } from "./settings.js";
+import { isGM } from "./isGM.js";
 
 Hooks.on("init", () => {
    registerSettings();
@@ -22,7 +23,7 @@ Hooks.on("ready", () => {
    }
 
    const isPlayerUiOverridden =
-      game.user.isGM === false &&
+      !isGM() &&
       (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
          hiddenPlayersList.includes(playerName));
    const settings = game.settings.get("hide-player-ui", "settings");
