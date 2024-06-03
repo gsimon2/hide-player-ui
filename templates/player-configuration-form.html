@@ -69,6 +69,13 @@
                     </div>
                 {{/unless}}
 
+                {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.scenesDirectory)) }}
+                    <div class="form-group">
+                        <label>{{localize "hide-player-ui.settings-form.hide-sidebar.scenesDirectory.label"}}</label>
+                        <input type="checkbox" name="hideSideBar.scenesDirectory" data-dtype="Boolean" {{checked playerConfiguration.hideSideBar.scenesDirectory}} />
+                    </div>
+                {{/unless}}
+
                 {{#unless (logicalAnd playerUiOverridden (logicalOr settings.hideSideBar.complete settings.hideSideBar.actorsDirectory)) }}
                     <div class="form-group">
                         <label>{{localize "hide-player-ui.settings-form.hide-sidebar.actorsDirectory.label"}}</label>

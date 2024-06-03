@@ -14,6 +14,7 @@ export const defaultSettings = {
       complete: true,
       chatLog: true,
       combatTracker: true,
+      scenesDirectory: true,
       actorsDirectory: true,
       itemsDirectory: true,
       journalEntries: true,
@@ -44,6 +45,7 @@ export const defaultPlayerConfig = {
       complete: false,
       chatLog: false,
       combatTracker: false,
+      scenesDirectory: false,
       actorsDirectory: false,
       itemsDirectory: false,
       journalEntries: false,
@@ -98,6 +100,15 @@ export const registerSettings = () => {
       scope: "world",
       config: true,
       default: true,
+      type: Boolean,
+   });
+
+   game.settings.register("hide-player-ui", "hideForAssistantGM", {
+      name: "hide-player-ui.settings.hide-for-assisstant-gm.name",
+      hint: "hide-player-ui.settings.hide-for-assisstant-gm.hint",
+      scope: "world",
+      config: true,
+      default: false,
       type: Boolean,
    });
 

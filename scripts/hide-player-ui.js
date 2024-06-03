@@ -1,5 +1,5 @@
-import { registerSettings } from "./settings.js";
-import { defaultPlayerConfig } from "./settings.js";
+import { registerSettings, defaultPlayerConfig } from "./settings.js";
+import { isGmOrAssistant } from "./isGM.js";
 
 Hooks.on("init", () => {
    registerSettings();
@@ -23,7 +23,7 @@ Hooks.on("ready", async () => {
    }
 
    const isPlayerUiOverridden =
-      game.user.isGM === false &&
+      !isGmOrAssistant() &&
       (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
          hiddenPlayersList.includes(playerName));
    const settings = game.settings.get("hide-player-ui", "settings");   
@@ -74,6 +74,9 @@ Hooks.on("ready", async () => {
       (playerConfig.hideSideBar.combatTracker ||
          (isPlayerUiOverridden && settings.hideSideBar.combatTracker)) &&
          hideElement("combatTracker");
+      (playerConfig.hideSideBar.scenesDirectory ||
+         (isPlayerUiOverridden && settings.hideSideBar.scenesDirectory)) &&
+         hideElement("scenesDirectory");
       (playerConfig.hideSideBar.actorsDirectory ||
          (isPlayerUiOverridden && settings.hideSideBar.actorsDirectory)) &&
          hideElement("actorsDirectory");
@@ -186,6 +189,9 @@ const setFocusToFirstDisplayedTab = (hideSideBarSettings) => {
                return;
             case "combatTracker":
                document.querySelector('a[data-tab="combat"]').click();
+               return;
+            case "scenesDirectory":
+               document.querySelector('a[data-tab="scenes"]').click();
                return;
             case "actorsDirectory":
                document.querySelector('a[data-tab="actors"]').click();

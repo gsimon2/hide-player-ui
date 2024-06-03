@@ -20,6 +20,10 @@
    visibility: hidden !important;
 }
 
+.hide-player-ui-logo #controls {
+   margin-top: 12px;
+}
+
 .hide-player-ui-navigation #navigation {
     display: none !important;
 }
@@ -53,6 +57,10 @@
 }
 
 .hide-player-ui-combatTracker a[data-tab="combat"] {
+    display: none !important;
+}
+
+.hide-player-ui-scenesDirectory a[data-tab="scenes"] {
     display: none !important;
 }
 
