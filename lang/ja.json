@@ -64,6 +64,9 @@
                 "combatTracker": {
                     "label": "イニシアチブ表を隠す"
                 },
+                "scenesDirectory": {
+                    "label": "Hide Scenes Directory"
+                },
                 "actorsDirectory": {
                     "label": "キャラクター一覧を隠す"
                 },

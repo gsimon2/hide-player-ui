@@ -64,6 +64,9 @@
                 "combatTracker": {
                     "label": "Hide Combat Tracker"
                 },
+                "scenesDirectory": {
+                    "label": "Hide Scenes Directory"
+                },
                 "actorsDirectory": {
                     "label": "Hide Actors Directory"
                 },

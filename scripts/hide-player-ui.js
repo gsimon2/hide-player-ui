@@ -69,6 +69,9 @@ Hooks.on("ready", () => {
       (playerConfig.hideSideBar.combatTracker ||
          (isPlayerUiOverridden && settings.hideSideBar.combatTracker)) &&
          hideElement("combatTracker");
+      (playerConfig.hideSideBar.scenesDirectory ||
+         (isPlayerUiOverridden && settings.hideSideBar.scenesDirectory)) &&
+         hideElement("scenesDirectory");
       (playerConfig.hideSideBar.actorsDirectory ||
          (isPlayerUiOverridden && settings.hideSideBar.actorsDirectory)) &&
          hideElement("actorsDirectory");
@@ -181,6 +184,9 @@ const setFocusToFirstDisplayedTab = (hideSideBarSettings) => {
                return;
             case "combatTracker":
                document.querySelector('a[data-tab="combat"]').click();
+               return;
+            case "scenesDirectory":
+               document.querySelector('a[data-tab="scenes"]').click();
                return;
             case "actorsDirectory":
                document.querySelector('a[data-tab="actors"]').click();
