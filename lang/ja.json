@@ -65,7 +65,7 @@
                     "label": "イニシアチブ表を隠す"
                 },
                 "scenesDirectory": {
-                    "label": "Hide Scenes Directory"
+                    "label": "シーンディレクトリを非表示にする"
                 },
                 "actorsDirectory": {
                     "label": "キャラクター一覧を隠す"
