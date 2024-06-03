@@ -20,6 +20,10 @@
    visibility: hidden !important;
 }
 
+.hide-player-ui-logo #controls {
+   margin-top: 12px;
+}
+
 .hide-player-ui-navigation #navigation {
     display: none !important;
 }
