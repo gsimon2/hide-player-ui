@@ -6,8 +6,8 @@
                 "hint": "非表示にするUIの設定をGMではない全プレイヤーに適用します。"
             },
             "hide-for-assisstant-gm": {
-                "name": "Hide For Assistant GM",
-                "hint": "Applies the hidden UI configuration to assistant GM (Not GM)."
+                "name": "アシスタント GM の非表示",
+                "hint": "非表示の UI 設定をアシスタント GM (GM ではない) に適用します。"
             },
             "hidden-players": {
                 "name": "プレイヤー名を指定して隠す",

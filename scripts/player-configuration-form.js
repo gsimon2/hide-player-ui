@@ -1,5 +1,5 @@
 import { defaultPlayerConfig } from "./settings.js";
-import { isGM } from "./isGM.js";
+import { isGmOrAssistant } from "./isGM.js";
 
 export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
    static get defaultOptions() {
@@ -39,7 +39,7 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
       }
 
       return (
-         !isGM() &&
+         !isGmOrAssistant() &&
          (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
             hiddenPlayersList.includes(playerName))
       );
