@@ -3,7 +3,7 @@ import { isGmOrAssistant } from "./isGM.js";
 
 export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
    static get defaultOptions() {
-      return mergeObject(super.defaultOptions, {
+      return foundry.utils.mergeObject(super.defaultOptions, {
          title: game.i18n.localize(
             "hide-player-ui.settings-form.hide-personal-ui.title"
          ),
@@ -57,7 +57,7 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
             game.modules.get("bossbar") && game.modules.get("bossbar").active,
       };
 
-      const data = mergeObject(moduleSpecificData, this.storedData);
+      const data = foundry.utils.mergeObject(moduleSpecificData, this.storedData);
       return data;
    }
 
@@ -75,7 +75,7 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
    }
 
    async _updateObject(events, formData) {
-      let configuration = mergeObject(
+      let configuration = foundry.utils.mergeObject(
          this.storedData.playerConfiguration,
          formData,
          { insertKeys: true, insertValues: true }

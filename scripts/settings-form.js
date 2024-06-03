@@ -2,7 +2,7 @@ import { defaultSettings } from "./settings.js";
 
 export class HidePlayerUISettingsForm extends FormApplication {
    static get defaultOptions() {
-      return mergeObject(super.defaultOptions, {
+      return foundry.utils.mergeObject(super.defaultOptions, {
          title: game.i18n.localize(
             "hide-player-ui.settings-form.hide-connecting-players-ui.title"
          ),
@@ -27,7 +27,7 @@ export class HidePlayerUISettingsForm extends FormApplication {
             game.modules.get("bossbar") && game.modules.get("bossbar").active,
       };
 
-      const data = mergeObject(moduleSpecificData, this.storedData);
+      const data = foundry.utils.mergeObject(moduleSpecificData, this.storedData);
       return data;
    }
 
@@ -43,7 +43,7 @@ export class HidePlayerUISettingsForm extends FormApplication {
    }
 
    _updateObject(events, formData) {
-      let settings = mergeObject(this.storedData, formData, {
+      let settings = foundry.utils.mergeObject(this.storedData, formData, {
          insertKeys: true,
          insertValues: true,
       });
