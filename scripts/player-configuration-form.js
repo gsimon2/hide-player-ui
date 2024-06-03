@@ -18,7 +18,7 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
    storedData = {
       playerUiOverridden: this.getPlayerUiOverridden(),
       settings: game.settings.get("hide-player-ui", "settings"),
-      playerConfiguration: game.settings.get("hide-player-ui", "playerConfig"),
+      playerConfiguration: game.user.getFlag("hide-player-ui", "playerConfig"),
    };
 
    getPlayerUiOverridden() {
@@ -74,13 +74,14 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
       this.render();
    }
 
-   _updateObject(events, formData) {
+   async _updateObject(events, formData) {
       let configuration = mergeObject(
          this.storedData.playerConfiguration,
          formData,
          { insertKeys: true, insertValues: true }
       );
-      game.settings.set("hide-player-ui", "playerConfig", configuration);
+
+      await game.user.setFlag("hide-player-ui", "playerConfig", configuration);
    }
 }
 

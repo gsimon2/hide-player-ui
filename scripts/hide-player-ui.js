@@ -1,11 +1,11 @@
-import { registerSettings } from "./settings.js";
+import { registerSettings, defaultPlayerConfig } from "./settings.js";
 import { isGmOrAssistant } from "./isGM.js";
 
 Hooks.on("init", () => {
    registerSettings();
 });
 
-Hooks.on("ready", () => {
+Hooks.on("ready", async () => {
    const playerName = game.user.name;
    var hiddenPlayersList = [];
 
@@ -26,8 +26,13 @@ Hooks.on("ready", () => {
       !isGmOrAssistant() &&
       (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
          hiddenPlayersList.includes(playerName));
-   const settings = game.settings.get("hide-player-ui", "settings");
-   const playerConfig = game.settings.get("hide-player-ui", "playerConfig");
+   const settings = game.settings.get("hide-player-ui", "settings");   
+
+   let playerConfig = game.user.getFlag("hide-player-ui", "playerConfig");
+   if (!playerConfig) {
+        playerConfig = JSON.parse(JSON.stringify(defaultPlayerConfig));
+        await game.user.setFlag("hide-player-ui", "playerConfig", playerConfig);
+   }
 
    if (playerConfig.hideLogo || (isPlayerUiOverridden && settings.hideLogo)) {
       hideElement("logo");
@@ -102,7 +107,7 @@ Hooks.on("ready", () => {
 
       let sidebarSettings = {};
       for (const [key, value] of Object.entries(settings.hideSideBar)) {
-         sidebarSettings[key] = value || playerConfig.hideSideBar[key];
+         sidebarSettings[key] = (isPlayerUiOverridden && value) || playerConfig.hideSideBar[key];
       }
 
       setFocusToFirstDisplayedTab(sidebarSettings);

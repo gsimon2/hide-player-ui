@@ -94,14 +94,6 @@ export const registerSettings = () => {
       config: false,
    });
 
-   game.settings.register("hide-player-ui", "playerConfig", {
-      name: "Hide Player UI Configuration",
-      scope: "client",
-      default: defaultPlayerConfig,
-      type: Object,
-      config: false,
-   });
-
    game.settings.register("hide-player-ui", "hideForAllPlayers", {
       name: "hide-player-ui.settings.hide-for-all-players.name",
       hint: "hide-player-ui.settings.hide-for-all-players.hint",
