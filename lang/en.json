@@ -61,6 +61,9 @@
                 "chatLog": {
                     "label": "Hide Chat Log"
                 },
+                "chatInput": {
+                  "label": "Hide Chat Input"
+              },
                 "combatTracker": {
                     "label": "Hide Combat Tracker"
                 },
