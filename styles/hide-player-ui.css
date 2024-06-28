@@ -1,5 +1,6 @@
 .hide-player-ui.settings-form .form-group {
-    margin-bottom: 0.75rem;
+   margin-top: 0.5rem; 
+   margin-bottom: 1rem;
 }
 
 .hide-player-ui.settings-form .warning-note {
@@ -54,6 +55,14 @@
 
 .hide-player-ui-chatLog a[data-tab="chat"] {
     display: none !important;
+}
+
+.hide-player-ui-chatInput #chat-form {
+   display: none !important;
+}
+
+.hide-player-ui-chatInput #chat-controls {
+   display: none !important;
 }
 
 .hide-player-ui-combatTracker a[data-tab="combat"] {
@@ -132,6 +141,12 @@
     margin-left: 1rem;
     border-left: 1px solid #1c1c1c78;
     padding-left: 0.5rem;
+}
+
+.hide-player-ui .sub-sub-option-grouping {
+   margin-left: 0.25rem;
+   border-left: 1px solid #1c1c1c78;
+   padding-left: 0.5rem;
 }
 
 .hide-player-ui .notes-second-line {

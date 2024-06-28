@@ -13,6 +13,7 @@ export const defaultSettings = {
    hideSideBar: {
       complete: true,
       chatLog: true,
+      chatInput: true,
       combatTracker: true,
       scenesDirectory: true,
       actorsDirectory: true,
@@ -44,6 +45,7 @@ export const defaultPlayerConfig = {
    hideSideBar: {
       complete: false,
       chatLog: false,
+      chatInput: false,
       combatTracker: false,
       scenesDirectory: false,
       actorsDirectory: false,

@@ -8,6 +8,7 @@
             type="checkbox"
             name="hideLogo"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-logo.label'}}"
             {{checked
             hideLogo}}
          />
@@ -26,6 +27,7 @@
                type="checkbox"
                name="hideNavigation.complete"
                data-dtype="Boolean"
+               title="{{localize 'hide-player-ui.settings-form.hide-navigation.complete.label'}}"
                {{checked
                hideNavigation.complete}}
             />
@@ -50,6 +52,7 @@
                   type="checkbox"
                   name="hideNavigation.navToggle"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-navigation.navToggle.label'}}"
                   {{checked
                   hideNavigation.navToggle}}
                />
@@ -64,6 +67,7 @@
                   type="checkbox"
                   name="hideNavigation.sceneList"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-navigation.sceneList.label'}}"
                   {{checked
                   hideNavigation.sceneList}}
                />
@@ -79,6 +83,7 @@
                   type="checkbox"
                   name="hideNavigation.bossBar"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-navigation.bossBar.label'}}"
                   {{checked
                   hideNavigation.bossBar}}
                />
@@ -96,6 +101,7 @@
             type="checkbox"
             name="hideControls"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-controls.label'}}"
             {{checked
             hideControls}}
          />
@@ -114,6 +120,7 @@
                type="checkbox"
                name="hideSideBar.complete"
                data-dtype="Boolean"
+               title="{{localize 'hide-player-ui.settings-form.hide-sidebar.complete.label'}}"
                {{checked
                hideSideBar.complete}}
             />
@@ -138,9 +145,27 @@
                   type="checkbox"
                   name="hideSideBar.chatLog"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.chatLog.label'}}"
                   {{checked
                   hideSideBar.chatLog}}
                />
+            </div>
+
+            <div class="sub-sub-option-grouping">
+               <div class="form-group">
+                  <label
+                     >{{localize
+                     "hide-player-ui.settings-form.hide-sidebar.chatInput.label"}}</label
+                  >
+                  <input
+                     type="checkbox"
+                     name="hideSideBar.chatInput"
+                     data-dtype="Boolean"
+                     title="{{localize 'hide-player-ui.settings-form.hide-sidebar.chatInput.label'}}"
+                     {{checked
+                     hideSideBar.chatInput}}
+                  />
+               </div>
             </div>
 
             <div class="form-group">
@@ -152,6 +177,7 @@
                   type="checkbox"
                   name="hideSideBar.combatTracker"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.combatTracker.label'}}"
                   {{checked
                   hideSideBar.combatTracker}}
                />
@@ -166,6 +192,7 @@
                   type="checkbox"
                   name="hideSideBar.scenesDirectory"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.scenesDirectory.label'}}"
                   {{checked
                   hideSideBar.scenesDirectory}}
                />
@@ -180,6 +207,7 @@
                   type="checkbox"
                   name="hideSideBar.actorsDirectory"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.actorsDirectory.label'}}"
                   {{checked
                   hideSideBar.actorsDirectory}}
                />
@@ -194,6 +222,7 @@
                   type="checkbox"
                   name="hideSideBar.itemsDirectory"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.itemsDirectory.label'}}"
                   {{checked
                   hideSideBar.itemsDirectory}}
                />
@@ -208,6 +237,7 @@
                   type="checkbox"
                   name="hideSideBar.journalEntries"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.journalEntries.label'}}"
                   {{checked
                   hideSideBar.journalEntries}}
                />
@@ -222,6 +252,7 @@
                   type="checkbox"
                   name="hideSideBar.rollableTables"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.rollableTables.label'}}"
                   {{checked
                   hideSideBar.rollableTables}}
                />
@@ -236,6 +267,7 @@
                   type="checkbox"
                   name="hideSideBar.cardStacks"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.cardStacks.label'}}"
                   {{checked
                   hideSideBar.cardStacks}}
                />
@@ -250,6 +282,7 @@
                   type="checkbox"
                   name="hideSideBar.audioPlaylists"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.audioPlaylists.label'}}"
                   {{checked
                   hideSideBar.audioPlaylists}}
                />
@@ -264,6 +297,7 @@
                   type="checkbox"
                   name="hideSideBar.compendiumPacks"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.compendiumPacks.label'}}"
                   {{checked
                   hideSideBar.compendiumPacks}}
                />
@@ -278,6 +312,7 @@
                   type="checkbox"
                   name="hideSideBar.gameSettings"
                   data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.gameSettings.label'}}"
                   {{checked
                   hideSideBar.gameSettings}}
                />
@@ -294,6 +329,7 @@
             type="checkbox"
             name="hidePlayers"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-players.label'}}"
             {{checked
             hidePlayers}}
          />
@@ -311,6 +347,7 @@
             type="checkbox"
             name="hideHotbar"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-hotbar.label'}}"
             {{checked
             hideHotbar}}
          />
@@ -328,6 +365,7 @@
             type="checkbox"
             name="hidePlayerConfig"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-player-config.label'}}"
             {{checked
             hidePlayerConfig}}
          />
@@ -345,6 +383,7 @@
             type="checkbox"
             name="hideTokenHUD"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-token-hud.label'}}"
             {{checked
             hideTokenHUD}}
          />
@@ -363,6 +402,7 @@
             type="checkbox"
             name="hideTokenActionHUD"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-token-action-hud.label'}}"
             {{checked
             hideTokenActionHUD}}
          />
@@ -381,6 +421,7 @@
             type="checkbox"
             name="hideCustomHotbar"
             data-dtype="Boolean"
+            title="{{localize 'hide-player-ui.settings-form.hide-custom-hotbar.label'}}"
             {{checked
             hideCustomHotbar}}
          />

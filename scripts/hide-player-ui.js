@@ -26,12 +26,12 @@ Hooks.on("ready", async () => {
       !isGmOrAssistant() &&
       (game.settings.get("hide-player-ui", "hideForAllPlayers") ||
          hiddenPlayersList.includes(playerName));
-   const settings = game.settings.get("hide-player-ui", "settings");   
+   const settings = game.settings.get("hide-player-ui", "settings");
 
    let playerConfig = game.user.getFlag("hide-player-ui", "playerConfig");
    if (!playerConfig) {
-        playerConfig = JSON.parse(JSON.stringify(defaultPlayerConfig));
-        await game.user.setFlag("hide-player-ui", "playerConfig", playerConfig);
+      playerConfig = JSON.parse(JSON.stringify(defaultPlayerConfig));
+      await game.user.setFlag("hide-player-ui", "playerConfig", playerConfig);
    }
 
    if (playerConfig.hideLogo || (isPlayerUiOverridden && settings.hideLogo)) {
@@ -71,6 +71,9 @@ Hooks.on("ready", async () => {
       (playerConfig.hideSideBar.chatLog ||
          (isPlayerUiOverridden && settings.hideSideBar.chatLog)) &&
          hideElement("chatLog");
+      (playerConfig.hideSideBar.chatInput ||
+         (isPlayerUiOverridden && settings.hideSideBar.chatInput)) &&
+         hideElement("chatInput");
       (playerConfig.hideSideBar.combatTracker ||
          (isPlayerUiOverridden && settings.hideSideBar.combatTracker)) &&
          hideElement("combatTracker");
@@ -107,7 +110,8 @@ Hooks.on("ready", async () => {
 
       let sidebarSettings = {};
       for (const [key, value] of Object.entries(settings.hideSideBar)) {
-         sidebarSettings[key] = (isPlayerUiOverridden && value) || playerConfig.hideSideBar[key];
+         sidebarSettings[key] =
+            (isPlayerUiOverridden && value) || playerConfig.hideSideBar[key];
       }
 
       setFocusToFirstDisplayedTab(sidebarSettings);

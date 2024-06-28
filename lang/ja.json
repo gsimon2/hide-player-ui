@@ -61,6 +61,9 @@
                 "chatLog": {
                     "label": "チャットログを隠す"
                 },
+                "chatInput": {
+                    "label": "チャット入力を非表示にする"
+                },
                 "combatTracker": {
                     "label": "イニシアチブ表を隠す"
                 },
