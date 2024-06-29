@@ -1,6 +1,35 @@
 import { registerSettings, defaultPlayerConfig } from "./settings.js";
 import { isGmOrAssistant } from "./isGM.js";
 
+const isSelectorValid = (selector) => {
+   try {
+      document.createDocumentFragment().querySelector(selector);
+   } catch {
+      return false;
+   }
+   return true;
+};
+
+const handleCustomSelectors = (selectorText) => {
+   const selectors = selectorText.split(";").map((s) => s.trim());
+
+   const styleSheet = [...document.styleSheets].find((sheet) =>
+      sheet.href.includes("hide-player-ui")
+   );
+
+   selectors
+      .filter((s) => s.length)
+      .forEach((selector) => {
+         if (isSelectorValid(selector)) {
+            styleSheet.insertRule(`${selector} { display: none !important}`, 0);
+         } else {
+            console.error(
+               `hide-player-ui: ${selector} is not a valid CSS selector.`
+            );
+         }
+      });
+};
+
 Hooks.on("init", () => {
    registerSettings();
 });
@@ -32,6 +61,13 @@ Hooks.on("ready", async () => {
    if (!playerConfig) {
       playerConfig = JSON.parse(JSON.stringify(defaultPlayerConfig));
       await game.user.setFlag("hide-player-ui", "playerConfig", playerConfig);
+   }
+
+   if (isPlayerUiOverridden && settings.customSelectors) {
+      handleCustomSelectors(settings.customSelectors);
+   }
+   if (playerConfig.customSelectors) {
+      handleCustomSelectors(playerConfig.customSelectors);
    }
 
    if (playerConfig.hideLogo || (isPlayerUiOverridden && settings.hideLogo)) {

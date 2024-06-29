@@ -431,6 +431,25 @@
       </div>
       {{/if}}
 
+      <div class="form-group">
+         <label
+            >{{localize
+            "hide-player-ui.settings-form.hide-css-by-css-selector.label"}}</label
+         >
+         <p class="notes">
+            {{localize
+            "hide-player-ui.settings-form.hide-css-by-css-selector.notes"}}
+         </p>
+         <textarea
+            name="customSelectors"
+            data-dtype="string"
+            rows="4"
+            cols="50"
+         >
+            {{~{customSelectors}~}}
+         </textarea>
+      </div>
+
       <div class="warning-note">
          <p>
             {{localize "hide-player-ui.settings-form.refresh-player-sessions"}}
