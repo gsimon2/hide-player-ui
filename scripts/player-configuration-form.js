@@ -1,4 +1,4 @@
-import { defaultPlayerConfig } from "./settings.js";
+import { falseySettings, truthySettings } from "./settings.js";
 import { isGmOrAssistant } from "./isGM.js";
 
 export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
@@ -57,19 +57,43 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
             game.modules.get("bossbar") && game.modules.get("bossbar").active,
       };
 
-      const data = foundry.utils.mergeObject(moduleSpecificData, this.storedData);
+      const data = foundry.utils.mergeObject(
+         moduleSpecificData,
+         this.storedData
+      );
       return data;
    }
 
    activateListeners(html) {
       super.activateListeners(html);
       html.find('button[name="reset"]').click(this.onReset.bind(this));
+      html
+         .find('button[name="toggleAllCheckboxes"]')
+         .click(this.onToggleCheckboxes.bind(this));
    }
 
    onReset() {
-      this.storedData.playerConfiguration = JSON.parse(
-         JSON.stringify(defaultPlayerConfig)
-      );
+      this.storedData.playerConfiguration = { ...falseySettings };
+      this.render();
+   }
+
+   onToggleCheckboxes() {
+      const formData = Object.fromEntries(new FormData(this.form));
+      const formDataWithoutCustomSelectors = { ...formData };
+      delete formDataWithoutCustomSelectors.customSelectors;
+      const checkboxCount = this.form.querySelectorAll(
+         'input[type="checkbox"]'
+      ).length;
+
+      const nextCheckboxValue =
+         Object.values(formDataWithoutCustomSelectors).filter(
+            (val) => val == "on"
+         ).length !== checkboxCount;
+
+      this.storedData.playerConfiguration = {
+         ...(nextCheckboxValue ? truthySettings : falseySettings),
+         customSelectors: formData.customSelectors,
+      };
 
       this.render();
    }

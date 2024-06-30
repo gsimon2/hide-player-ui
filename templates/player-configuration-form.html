@@ -1,4 +1,7 @@
 <div class="tab active" data-tab="general">
+   <button type="button" name="toggleAllCheckboxes">
+      {{localize "hide-player-ui.settings-form.toggle-all-checkboxes"}}
+   </button>
    <form autocomplete="off" class="hide-player-ui settings-form">
       {{#unless (logicalAnd playerUiOverridden settings.hideLogo) }}
       <div class="form-group">

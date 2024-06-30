@@ -15,6 +15,7 @@
             }
         },
         "settings-form": {
+            "toggle-all-checkboxes": "Toggle All Checkboxes",
             "hide-personal-ui": {
                 "title": "Personal UI Configuration",
                 "hint": "Configuration menu for which elements to show / hide on this screen."

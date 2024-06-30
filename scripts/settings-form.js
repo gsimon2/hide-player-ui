@@ -1,4 +1,4 @@
-import { defaultSettings } from "./settings.js";
+import { truthySettings, falseySettings } from "./settings.js";
 
 export class HidePlayerUISettingsForm extends FormApplication {
    static get defaultOptions() {
@@ -27,17 +27,43 @@ export class HidePlayerUISettingsForm extends FormApplication {
             game.modules.get("bossbar") && game.modules.get("bossbar").active,
       };
 
-      const data = foundry.utils.mergeObject(moduleSpecificData, this.storedData);
+      const data = foundry.utils.mergeObject(
+         moduleSpecificData,
+         this.storedData
+      );
       return data;
    }
 
    activateListeners(html) {
       super.activateListeners(html);
       html.find('button[name="reset"]').click(this.onReset.bind(this));
+      html
+         .find('button[name="toggleAllCheckboxes"]')
+         .click(this.onToggleCheckboxes.bind(this));
    }
 
    onReset() {
-      this.storedData = JSON.parse(JSON.stringify(defaultSettings));
+      this.storedData = { ...truthySettings };
+      this.render();
+   }
+
+   onToggleCheckboxes() {
+      const formData = Object.fromEntries(new FormData(this.form));
+      const formDataWithoutCustomSelectors = { ...formData };
+      delete formDataWithoutCustomSelectors.customSelectors;
+      const checkboxCount = this.form.querySelectorAll(
+         'input[type="checkbox"]'
+      ).length;
+
+      const nextCheckboxValue =
+         Object.values(formDataWithoutCustomSelectors).filter(
+            (val) => val == "on"
+         ).length !== checkboxCount;
+
+      this.storedData = {
+         ...(nextCheckboxValue ? truthySettings : falseySettings),
+         customSelectors: formData.customSelectors,
+      };
 
       this.render();
    }

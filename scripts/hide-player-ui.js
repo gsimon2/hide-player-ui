@@ -1,4 +1,4 @@
-import { registerSettings, defaultPlayerConfig } from "./settings.js";
+import { registerSettings, falseySettings } from "./settings.js";
 import { isGmOrAssistant } from "./isGM.js";
 
 const isSelectorValid = (selector) => {
@@ -59,7 +59,7 @@ Hooks.on("ready", async () => {
 
    let playerConfig = game.user.getFlag("hide-player-ui", "playerConfig");
    if (!playerConfig) {
-      playerConfig = JSON.parse(JSON.stringify(defaultPlayerConfig));
+      playerConfig = JSON.parse(JSON.stringify(falseySettings));
       await game.user.setFlag("hide-player-ui", "playerConfig", playerConfig);
    }
 
