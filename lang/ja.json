@@ -15,6 +15,7 @@
             }
         },
         "settings-form": {
+         "toggle-all-checkboxes": "すべてのチェックボックスを切り替えます",
             "hide-personal-ui": {
                 "title": "個人のUI設定",
                 "hint": "この画面のUI表示/非表示を設定するメニューです。"

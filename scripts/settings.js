@@ -1,7 +1,7 @@
 import { HidePlayerUISettingsForm } from "./settings-form.js";
 import { HidePlayerUIPlayerConfigurationForm } from "./player-configuration-form.js";
 
-export const defaultSettings = {
+export const truthySettings = {
    hideLogo: true,
    hideNavigation: {
       complete: true,
@@ -28,13 +28,13 @@ export const defaultSettings = {
    hidePlayers: true,
    hideHotbar: true,
    hidePlayerConfig: true,
-   hideTokenHUD: false,
+   hideTokenHUD: true,
    hideTokenActionHUD: true,
    hideCustomHotbar: true,
    customSelectors: ''
 };
 
-export const defaultPlayerConfig = {
+export const falseySettings = {
    hideLogo: false,
    hideNavigation: {
       complete: false,
@@ -93,7 +93,7 @@ export const registerSettings = () => {
    game.settings.register("hide-player-ui", "settings", {
       name: "Hide Player UI Settings",
       scope: "world",
-      default: defaultSettings,
+      default: truthySettings,
       type: Object,
       config: false,
    });
