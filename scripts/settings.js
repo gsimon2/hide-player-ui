@@ -31,6 +31,7 @@ export const defaultSettings = {
    hideTokenHUD: false,
    hideTokenActionHUD: true,
    hideCustomHotbar: true,
+   customSelectors: ''
 };
 
 export const defaultPlayerConfig = {
@@ -63,6 +64,7 @@ export const defaultPlayerConfig = {
    hideTokenHUD: false,
    hideTokenActionHUD: false,
    hideCustomHotbar: false,
+   customSelectors: ''
 };
 
 export const registerSettings = () => {

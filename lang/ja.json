@@ -118,6 +118,10 @@
             "hide-custom-hotbar": {
                 "label": "カスタムホットバーを隠す",
                 "notes": "「Custom Hotbar」MODから画面下部のカスタムホットバーを非表示にします。"
+            },
+            "hide-css-by-css-selector": {
+               "label": "CSSセレクターで隠す",
+               "notes": "CSS セレクターで指定された要素を非表示にします。複数のセレクターはセミコロン (;) で区切る必要があります。"
             }
         }
     }

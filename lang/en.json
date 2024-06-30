@@ -118,6 +118,10 @@
             "hide-custom-hotbar": {
                 "label": "Hide Custom Hotbar",
                 "notes": "Hides custom hotbar across bottom of screen from the Custom Hotbar module"
+            },
+            "hide-css-by-css-selector": {
+               "label": "Hide By CSS Selectors",
+               "notes": "Hides elements specified by CSS selectors. Multiple selectors should be delimited by a semi-colon (;)"
             }
         }
     }
