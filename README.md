@@ -5,8 +5,8 @@
 
 A simple module for [FoundryVtt](https://foundryvtt.com/) that enables users to configure what Foundry UI they would like to have shown on the screen. The GM can also override what UI connecting players are allowed to see. One common use case for this is when a screen is being used to just broadcast the map and much of the onscreen UI is not needed.
 
-![demo](demo.gif)
+![demo](https://github.com/user-attachments/assets/41420e2b-07c7-41f9-ab35-13c4ca915283)
 
-![menu1](menu1.png)
+<img width="302" alt="menu1" src="https://github.com/user-attachments/assets/bfabdb00-b751-46f7-89d4-473abf780e6e">
 
-![menu2](menu2.png)
+<img width="325" alt="menu2" src="https://github.com/user-attachments/assets/626882bd-0fda-4c67-89cd-de57511e5dcb">
