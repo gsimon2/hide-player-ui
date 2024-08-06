@@ -1,45 +1,44 @@
 {
-   "name": "hide-player-ui",
-   "title": "Hide Player UI",
-   "id": "hide-player-ui",
-   "description": "Allows configuration of what Foundry UI should be displayed. This is can set on a per user basis or the GM can override what UI connecting players get to see.",
-   "authors": [
-      {
-         "name": "Glen Simon",
-         "email": "glen.a.simon@gmail.com",
-         "url": "https://github.com/gsimon2"
-      }
-   ],
-   "url": "https://github.com/gsimon2/hide-player-ui",
-   "readme": "https://raw.githubusercontent.com/gsimon2/hide-player-ui/main/README.md",
-   "bugs": "https://github.com/gsimon2/hide-player-ui/issues",
-   "changelog": "https://github.com/gsimon2/hide-player-ui/releases",
-   "flags": {},
-   "version": "1.7.1",
-   "scripts": [],
-   "esmodules": ["scripts/hide-player-ui.js"],
-   "styles": ["styles/hide-player-ui.css"],
-   "languages": [
-      {
-         "lang": "en",
-         "name": "English",
-         "path": "lang/en.json"
-      },
-      {
-         "lang": "ja",
-         "name": "日本語",
-         "path": "lang/ja.json"
-      }
-   ],
-   "packs": [],
-   "socket": false,
-   "manifest": "https://github.com/gsimon2/hide-player-ui/releases/download/1.7.1/module.json",
-   "download": "https://github.com/gsimon2/hide-player-ui/releases/download/1.7.1/module.zip",
-   "protected": false,
-   "coreTranslation": false,
-   "library": false,
-   "compatibility": {
-      "minimum": "10",
-      "verified": "12.327"
-   }
+  "title": "Hide Player UI",
+  "id": "hide-player-ui",
+  "description": "Allows configuration of what Foundry UI should be displayed. This is can set on a per user basis or the GM can override what UI connecting players get to see.",
+  "authors": [
+    {
+      "name": "Glen Simon",
+      "email": "glen.a.simon@gmail.com",
+      "url": "https://github.com/gsimon2",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/gsimon2/hide-player-ui",
+  "readme": "https://raw.githubusercontent.com/gsimon2/hide-player-ui/main/README.md",
+  "bugs": "https://github.com/gsimon2/hide-player-ui/issues",
+  "changelog": "https://github.com/gsimon2/hide-player-ui/releases",
+  "version": "1.7.1",
+  "esmodules": [
+    "scripts/hide-player-ui.js"
+  ],
+  "styles": [
+    "styles/hide-player-ui.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "lang/ja.json",
+      "flags": {}
+    }
+  ],
+  "manifest": "https://github.com/gsimon2/hide-player-ui/releases/download/1.7.1/module.json",
+  "download": "https://github.com/gsimon2/hide-player-ui/releases/download/1.7.1/module.zip",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12.330"
+  }
 }
