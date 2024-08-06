@@ -27,11 +27,13 @@ Users can access the configuration menu to select which UI elements they want to
 
 The module provides two main configuration menus:
 
-1. **User Configuration**:
-   <img width="302" alt="menu1" src="https://github.com/user-attachments/assets/bfabdb00-b751-46f7-89d4-473abf780e6e">
+1. **GM Main Configuration**:
+<img width="633" alt="menu1" src="https://github.com/user-attachments/assets/3e61bf5e-6528-4ddc-875e-fe3cf3a14f47">
 
-2. **GM Override Configuration**:
-   <img width="325" alt="menu2" src="https://github.com/user-attachments/assets/626882bd-0fda-4c67-89cd-de57511e5dcb">
+
+2. **UI Specification Configuration (For Personal Configuration or Connecting Players)**:
+<img width="411" alt="menu2" src="https://github.com/user-attachments/assets/cdc617cc-1fc3-4d28-a7f5-50c2359a64c8">
+
 
 ## Installation
 
