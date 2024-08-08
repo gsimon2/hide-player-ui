@@ -97,7 +97,7 @@
                 }
             },
             "hide-players": {
-                "label": "Hide Active Plavers",
+                "label": "Hide Active Players",
                 "notes": "Hides active players display in bottom left of screen"
             },
             "hide-hotbar": {
