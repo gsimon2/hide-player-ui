@@ -57,6 +57,7 @@ Thanks to all the contributors who have helped improve this project:
 - [Wolfrum5150](https://github.com/Wolfrum5150) - 2 commits
 - [mherczeg](https://github.com/mherczeg) - 2 commits
 - [BrotherSharper](https://github.com/BrotherSharper) - 1 commit
+- [Spappz](https://github.com/Spappz) - 1 commit
 - [coffiarts](https://github.com/coffiarts) - 1 commit
 
 (This list is automatically generated based on git history.)
