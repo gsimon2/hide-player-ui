@@ -1,0 +1,129 @@
+{
+    "hide-player-ui": {
+        "settings": {
+            "hide-for-all-players": {
+                "name": "Nascondi per Tutti i Giocatori",
+                "hint": "Applica Configurazione UI Nascosta a tutti i giocatori (Non DM)."
+            },
+            "hide-for-assisstant-gm": {
+                "name": "Nascondi per Assistente DM",
+                "hint": "Applica Configurazione UI Nascosta all'assistente DM (Non DM)."
+            },
+            "hidden-players": {
+                "name": "Nomi Giocatori con UI Nascosta",
+                "hint": "Nascondi UI per i giocatori con questi nomi (elenco separato da virgole). Sovrascritto dall'impostazione Nascondi per Tutti i Giocatori."
+            }
+        },
+        "settings-form": {
+            "toggle-all-checkboxes": "Attiva/Disattiva tutte le caselle di controllo",
+            "hide-personal-ui": {
+                "title": "Configurazione UI personale",
+                "hint": "Menu di configurazione per quali elementi mostrare/nascondere in questa schermata."
+            },
+            "hide-connecting-players-ui": {
+                "title": "Configurazione UI del giocatore",
+                "hint": "Menu di configurazione per quali elementi mostrare/nascondere per i giocatori connessi."
+            },
+            "save": "Salva Modifiche",
+            "reset": "Ripristina Impostazioni Predefinite",
+            "refresh-player-sessions": "Le sessioni dei giocatori dovranno essere aggiornate affinché queste modifiche abbiano effetto.",
+            "hide-logo": {
+                "label": "Nascondi logo Foundry",
+                "notes": "Nasconde il logo di Foundry nell'angolo in alto a sinistra dello schermo"
+            },
+            "hide-navigation": {
+                "sub-options-label": "Oppure nascondi parti specifiche della sezione di navigazione: sovrascritta dall'impostazione Nascondi Sezione Navigazione",
+                "section-label": "Sezione Navigazione",
+                "complete": {
+                    "label": "Nascondi Sezione Navigazione",
+                    "notes": "Nasconde la sezione di navigazione nella parte superiore dello schermo"
+                },
+                "navToggle": {
+                    "label": "Attiva/Disattiva Navigazione"
+                },
+                "sceneList": {
+                    "label": "Elenco Scene"
+                },
+                "bossBar": {
+                    "label": "Barra del Boss"
+                }
+            },
+            "hide-controls": {
+                "label": "Nascondi Controlli",
+                "notes": "Nasconde i controlli del giocatore sulla sinistra dello schermo"
+            },
+            "hide-sidebar": {
+                "sub-options-label": "Oppure nascondi schede specifiche della barra laterale: sovrascritto dall'impostazione Nascondi Barra Laterale",
+                "section-label": "Sezione Barra Laterale",
+                "complete": {
+                    "label": "Nascondi Barra Laterale",
+                    "notes": "Nasconde l'intera barra laterale a destra dello schermo"
+                },
+                "chatLog": {
+                    "label": "Nascondi Chat"
+                },
+                "chatInput": {
+                  "label": "Nascondi Input Chat"
+              },
+                "combatTracker": {
+                    "label": "Nascondi Combat Tracker"
+                },
+                "scenesDirectory": {
+                    "label": "Nascondi Directory Scene"
+                },
+                "actorsDirectory": {
+                    "label": "Nascondi Directory Personaggi"
+                },
+                "itemsDirectory": {
+                    "label": "Nascondi Directory Oggetti"
+                },
+                "journalEntries": {
+                    "label": "Nascondi Voci Diario"
+                },
+                "rollableTables": {
+                    "label": "Nascondi Tabelle"
+                },
+                "cardStacks": {
+                    "label": "Nascondi Mazzi Carte"
+                },
+                "audioPlaylists": {
+                    "label": "Nascondi Playlist Audio"
+                },
+                "compendiumPacks": {
+                    "label": "Nascondi Compendi"
+                },
+                "gameSettings": {
+                    "label": "Nascondi Impostazioni Gioco"
+                }
+            },
+            "hide-players": {
+                "label": "Nascondi Giocatori Attivi",
+                "notes": "Nasconde la visualizzazione dei giocatori attivi nella parte inferiore sinistra dello schermo"
+            },
+            "hide-hotbar": {
+                "label": "Nascondi Hotbar",
+                "notes": "Nasconde la barra di accesso rapido nella parte inferiore dello schermo"
+            },
+            "hide-player-config": {
+                "label": "Nascondi Configurazione Giocatore",
+                "notes": "Nasconde il popup di configurazione del giocatore"
+            },
+            "hide-token-hud": {
+                "label": "Nascondi HUD Token ",
+                "notes": "Nasconde le azioni rapide dell'HUD del token visualizzate attorno a un token nella scena"
+            },
+            "hide-token-action-hud": {
+                "label": "Nascondi HUD Azioni Token",
+                "notes": "Nasconde il popup dell'HUD dell'azione token dal modulo HUD dell'azione token"
+            },
+            "hide-custom-hotbar": {
+                "label": "Nascondi Hotbar Personalizzata",
+                "notes": "Nasconde la Hotbar Personalizzata nella parte inferiore dello schermo dal modulo Hotbar Personalizzata"
+            },
+            "hide-css-by-css-selector": {
+               "label": "Nascondi per selettori CSS",
+               "notes": "Nasconde gli elementi specificati dai selettori CSS. I selettori multipli devono essere delimitati da un punto e virgola (;)"
+            }
+        }
+    }
+}
