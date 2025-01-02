@@ -54,6 +54,7 @@ This module is compatible with the Foundry VTT version indicated by the badge at
 Thanks to all the contributors who have helped improve this project:
 - [Joel Plourde](https://github.com/joelplourde4) - 3 commits
 - [Dan Brown](https://github.com/danbrownbacktablestudios) - 2 commits
+- [GregoryWarn](https://github.com/GregoryWarn) - 2 commits
 - [Wolfrum5150](https://github.com/Wolfrum5150) - 2 commits
 - [mherczeg](https://github.com/mherczeg) - 2 commits
 - [BrotherSharper](https://github.com/BrotherSharper) - 1 commit
@@ -62,7 +63,6 @@ Thanks to all the contributors who have helped improve this project:
 
 (This list is automatically generated based on git history.)
 <!--  To update, run `git shortlog -sne` and update the commit counts and usernames accordingly.-->
-
 ## License
 
 This project is licensed under the GNU General Public License v3.0 (GPLv3).
