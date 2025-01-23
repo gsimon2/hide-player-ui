@@ -53,55 +53,55 @@
     display: none !important;
 }
 
-.hide-player-ui-chatLog a[data-tab="chat"] {
+.hide-player-ui-chatLog #sidebar-tabs a[data-tab="chat"] {
     display: none !important;
 }
 
-.hide-player-ui-chatInput #chat-form {
+.hide-player-ui-chatInput #sidebar-tabs #chat-form {
    display: none !important;
 }
 
-.hide-player-ui-chatInput #chat-controls {
+.hide-player-ui-chatInput #sidebar-tabs #chat-controls {
    display: none !important;
 }
 
-.hide-player-ui-combatTracker a[data-tab="combat"] {
+.hide-player-ui-combatTracker #sidebar-tabs a[data-tab="combat"] {
     display: none !important;
 }
 
-.hide-player-ui-scenesDirectory a[data-tab="scenes"] {
+.hide-player-ui-scenesDirectory #sidebar-tabs a[data-tab="scenes"] {
     display: none !important;
 }
 
-.hide-player-ui-actorsDirectory a[data-tab="actors"] {
+.hide-player-ui-actorsDirectory #sidebar-tabs a[data-tab="actors"] {
     display: none !important;
 }
 
-.hide-player-ui-itemsDirectory a[data-tab="items"] {
+.hide-player-ui-itemsDirectory #sidebar-tabs a[data-tab="items"] {
     display: none !important;
 }
 
-.hide-player-ui-journalEntries a[data-tab="journal"] {
+.hide-player-ui-journalEntries #sidebar-tabs a[data-tab="journal"] {
     display: none !important;
 }
 
-.hide-player-ui-rollableTables a[data-tab="tables"] {
+.hide-player-ui-rollableTables #sidebar-tabs a[data-tab="tables"] {
     display: none !important;
 }
 
-.hide-player-ui-cardStacks a[data-tab="cards"] {
+.hide-player-ui-cardStacks #sidebar-tabs a[data-tab="cards"] {
     display: none !important;
 }
 
-.hide-player-ui-audioPlaylists a[data-tab="playlists"] {
+.hide-player-ui-audioPlaylists #sidebar-tabs a[data-tab="playlists"] {
     display: none !important;
 }
 
-.hide-player-ui-compendiumPacks a[data-tab="compendium"] {
+.hide-player-ui-compendiumPacks #sidebar-tabs a[data-tab="compendium"] {
     display: none !important;
 }
 
-.hide-player-ui-gameSettings a[data-tab="settings"] {
+.hide-player-ui-gameSettings #sidebar-tabs a[data-tab="settings"] {
     display: none !important;
 }
 
