@@ -1,4 +1,4 @@
-import { HidePlayerUISettingsForm } from "./settings-form.js";
+import { HideConnectingPlayerUISettingsForm } from "./connecting-players-settings-form.js";
 import { HidePlayerUIPlayerConfigurationForm } from "./player-configuration-form.js";
 
 export const truthySettings = {
@@ -11,7 +11,7 @@ export const truthySettings = {
    },
    hideControls: true,
    hideSideBar: {
-      complete: true,
+      complete: true, 
       chatLog: true,
       chatInput: true,
       combatTracker: true,
@@ -23,7 +23,7 @@ export const truthySettings = {
       cardStacks: true,
       audioPlaylists: true,
       compendiumPacks: true,
-      gameSettings: true,
+      gameSettings: true, 
    },
    hidePlayers: true,
    hideHotbar: true,
@@ -86,7 +86,7 @@ export const registerSettings = () => {
       label: "hide-player-ui.settings-form.hide-connecting-players-ui.title",
       hint: "hide-player-ui.settings-form.hide-connecting-players-ui.hint",
       icon: "fas fa-cogs",
-      type: HidePlayerUISettingsForm,
+      type: HideConnectingPlayerUISettingsForm,
       restricted: true,
    });
 

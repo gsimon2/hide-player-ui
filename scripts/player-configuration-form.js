@@ -81,17 +81,22 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
       const formData = Object.fromEntries(new FormData(this.form));
       const formDataWithoutCustomSelectors = { ...formData };
       delete formDataWithoutCustomSelectors.customSelectors;
-      const checkboxCount = this.form.querySelectorAll(
-         'input[type="checkbox"]'
-      ).length;
 
       const nextCheckboxValue =
          Object.values(formDataWithoutCustomSelectors).filter(
             (val) => val == "on"
-         ).length !== checkboxCount;
+         ).length === 0;
+
+      // Safe gaurd against accidently setting this as it can lead to a bad user experience
+      const playerTruthySettings = {
+         ...truthySettings,
+         hideSideBar: { ...truthySettings.hideSideBar },
+      };
+      playerTruthySettings.hideSideBar.complete = false;
+      playerTruthySettings.hideSideBar.gameSettings = false;
 
       this.storedData.playerConfiguration = {
-         ...(nextCheckboxValue ? truthySettings : falseySettings),
+         ...(nextCheckboxValue ? playerTruthySettings : falseySettings),
          customSelectors: formData.customSelectors,
       };
 

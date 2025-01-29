@@ -1,6 +1,6 @@
 import { truthySettings, falseySettings } from "./settings.js";
 
-export class HidePlayerUISettingsForm extends FormApplication {
+export class HideConnectingPlayerUISettingsForm extends FormApplication {
    static get defaultOptions() {
       return foundry.utils.mergeObject(super.defaultOptions, {
          title: game.i18n.localize(
@@ -58,7 +58,7 @@ export class HidePlayerUISettingsForm extends FormApplication {
       const nextCheckboxValue =
          Object.values(formDataWithoutCustomSelectors).filter(
             (val) => val == "on"
-         ).length !== checkboxCount;
+         ).length === 0;
 
       this.storedData = {
          ...(nextCheckboxValue ? truthySettings : falseySettings),
