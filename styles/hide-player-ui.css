@@ -57,11 +57,11 @@
     display: none !important;
 }
 
-.hide-player-ui-chatInput #sidebar-tabs #chat-form {
+.hide-player-ui-chatInput #sidebar #chat #chat-form {
    display: none !important;
 }
 
-.hide-player-ui-chatInput #sidebar-tabs #chat-controls {
+.hide-player-ui-chatInput #sidebar #chat #chat-controls {
    display: none !important;
 }
 
