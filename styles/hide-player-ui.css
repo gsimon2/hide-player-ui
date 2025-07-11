@@ -70,7 +70,7 @@
    display: none !important;
 }
 
-.hide-player-ui-chatLog #sidebar-tabs button[data-tab="chat"] {
+.hide-player-ui-chatLog #sidebar-tabs li:has(button[data-tab="chat"]) {
     display: none !important;
 }
 
@@ -86,51 +86,51 @@
    display: none !important;
 }
 
-.hide-player-ui-combatTracker #sidebar-tabs button[data-tab="combat"] {
+.hide-player-ui-combatTracker #sidebar-tabs li:has(button[data-tab="combat"]) {
     display: none !important;
 }
 
-.hide-player-ui-scenesDirectory #sidebar-tabs button[data-tab="scenes"] {
+.hide-player-ui-scenesDirectory #sidebar-tabs li:has(button[data-tab="scenes"]) {
     display: none !important;
 }
 
-.hide-player-ui-actorsDirectory #sidebar-tabs button[data-tab="actors"] {
+.hide-player-ui-actorsDirectory #sidebar-tabs li:has(button[data-tab="actors"]) {
     display: none !important;
 }
 
-.hide-player-ui-itemsDirectory #sidebar-tabs button[data-tab="items"] {
+.hide-player-ui-itemsDirectory #sidebar-tabs li:has(button[data-tab="items"]) {
     display: none !important;
 }
 
-.hide-player-ui-journalEntries #sidebar-tabs button[data-tab="journal"] {
+.hide-player-ui-journalEntries #sidebar-tabs li:has(button[data-tab="journal"]) {
     display: none !important;
 }
 
-.hide-player-ui-rollableTables #sidebar-tabs button[data-tab="tables"] {
+.hide-player-ui-rollableTables #sidebar-tabs li:has(button[data-tab="tables"]) {
     display: none !important;
 }
 
-.hide-player-ui-cardStacks #sidebar-tabs button[data-tab="cards"] {
+.hide-player-ui-cardStacks #sidebar-tabs li:has(button[data-tab="cards"]) {
     display: none !important;
 }
 
-.hide-player-ui-macros #sidebar-tabs button[data-tab="macros"] {
+.hide-player-ui-macros #sidebar-tabs li:has(button[data-tab="macros"]) {
     display: none !important;
 }
 
-.hide-player-ui-audioPlaylists #sidebar-tabs button[data-tab="playlists"] {
+.hide-player-ui-audioPlaylists #sidebar-tabs li:has(button[data-tab="playlists"]) {
     display: none !important;
 }
 
-.hide-player-ui-compendiumPacks #sidebar-tabs button[data-tab="compendium"] {
+.hide-player-ui-compendiumPacks #sidebar-tabs li:has(button[data-tab="compendium"]) {
     display: none !important;
 }
 
-.hide-player-ui-gameSettings #sidebar-tabs button[data-tab="settings"] {
+.hide-player-ui-gameSettings #sidebar-tabs li:has(button[data-tab="settings"]) {
     display: none !important;
 }
 
-.hide-player-ui-sidebarToggle #sidebar-tabs button[data-action="toggleState"] {
+.hide-player-ui-sidebarToggle #sidebar-tabs li:has(button[data-action="toggleState"]) {
     display: none !important;
 }
 
