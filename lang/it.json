@@ -94,6 +94,9 @@
                 },
                 "gameSettings": {
                     "label": "Nascondi Impostazioni Gioco"
+                },
+                "macros": {
+                    "label": "nascondere le macro"
                 }
             },
             "hide-players": {

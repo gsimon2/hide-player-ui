@@ -94,6 +94,9 @@
                 },
                 "gameSettings": {
                     "label": "Hide Game Settings"
+                },
+                "macros": {
+                    "label": "Hide Macros"
                 }
             },
             "hide-players": {
