@@ -269,6 +269,22 @@
                />
             </div>
             {{/unless}} {{#unless (logicalAnd playerUiOverridden (logicalOr
+            settings.hideSideBar.complete settings.hideSideBar.macros)) }}
+            <div class="form-group">
+               <label
+                  >{{localize
+                  "hide-player-ui.settings-form.hide-sidebar.macros.label"}}</label
+               >
+               <input
+                  type="checkbox"
+                  name="hideSideBar.macros"
+                  data-dtype="Boolean"
+                  title="{{localize 'hide-player-ui.settings-form.hide-sidebar.macros.label'}}"
+                  {{checked
+                  playerConfiguration.hideSideBar.macros}}
+               />
+            </div>
+            {{/unless}} {{#unless (logicalAnd playerUiOverridden (logicalOr
             settings.hideSideBar.complete settings.hideSideBar.audioPlaylists))
             }}
             <div class="form-group">

@@ -94,6 +94,9 @@
                 },
                 "gameSettings": {
                     "label": "ゲーム設定を隠す"
+                },
+                "macros": {
+                    "label": "マクロを隠す"
                 }
             },
             "hide-players": {

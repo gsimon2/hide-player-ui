@@ -131,6 +131,9 @@ Hooks.on("ready", async () => {
       (playerConfig.hideSideBar.cardStacks ||
          (isPlayerUiOverridden && settings.hideSideBar.cardStacks)) &&
          hideElement("cardStacks");
+      (playerConfig.hideSideBar.macros ||
+         (isPlayerUiOverridden && settings.hideSideBar.macros)) &&
+         hideElement("macros");
       (playerConfig.hideSideBar.audioPlaylists ||
          (isPlayerUiOverridden && settings.hideSideBar.audioPlaylists)) &&
          hideElement("audioPlaylists");
@@ -151,6 +154,11 @@ Hooks.on("ready", async () => {
       }
 
       setFocusToFirstDisplayedTab(sidebarSettings);
+
+      // If all tabs are hidden in the side bar, also hide the expand toggle
+      if (Object.entries(sidebarSettings).filter(([key]) => key !== 'complete').every(([,value]) => value === true)) {
+         hideElement('sidebarToggle')
+      }
    }
 
    if (
@@ -213,48 +221,67 @@ const hideElement = (id) => {
 };
 
 const setFocusToFirstDisplayedTab = (hideSideBarSettings) => {
-   if (!hideSideBarSettings.chatLog) {
-      return;
-   }
-
-   for (const [key, value] of Object.entries(hideSideBarSettings)) {
-      if (key === "complete") {
-         continue;
+   try {
+      if (!hideSideBarSettings.chatLog) {
+         return;
       }
 
-      if (value === false) {
-         switch (key) {
-            case "chatLog":
-               document.querySelector('a[data-tab="chat"]').click();
-               return;
-            case "combatTracker":
-               document.querySelector('a[data-tab="combat"]').click();
-               return;
-            case "scenesDirectory":
-               document.querySelector('a[data-tab="scenes"]').click();
-               return;
-            case "actorsDirectory":
-               document.querySelector('a[data-tab="actors"]').click();
-               return;
-            case "itemsDirectory":
-               document.querySelector('a[data-tab="items"]').click();
-               return;
-            case "journalEntries":
-               document.querySelector('a[data-tab="journal"]').click();
-               return;
-            case "rollableTables":
-               document.querySelector('a[data-tab="tables"]').click();
-               return;
-            case "audioPlaylists":
-               document.querySelector('a[data-tab="playlists"]').click();
-               return;
-            case "compendiumPacks":
-               document.querySelector('a[data-tab="compendium"]').click();
-               return;
-            case "gameSettings":
-               document.querySelector('a[data-tab="settings"]').click();
-               return;
+      for (const [key, value] of Object.entries(hideSideBarSettings)) {
+         if (key === "complete") {
+            continue;
+         }
+
+         if (value === false) {
+            switch (key) {
+               case "chatLog":
+                  document.querySelector('button[data-tab="chat"]').click();
+                  return;
+               case "combatTracker":
+                  document.querySelector('button[data-tab="combat"]').click();
+                  return;
+               case "scenesDirectory":
+                  document.querySelector('button[data-tab="scenes"]').click();
+                  return;
+               case "actorsDirectory":
+                  document.querySelector('button[data-tab="actors"]').click();
+                  return;
+               case "itemsDirectory":
+                  document.querySelector('button[data-tab="items"]').click();
+                  return;
+               case "journalEntries":
+                  document.querySelector('button[data-tab="journal"]').click();
+                  return;
+               case "rollableTables":
+                  document.querySelector('button[data-tab="tables"]').click();
+                  return;
+               case "cardStacks":
+                  document.querySelector('button[data-tab="cards"]').click();
+                  return;
+               case "macros":
+                  document.querySelector('button[data-tab="macros"]').click();
+                  return;
+               case "audioPlaylists":
+                  document
+                     .querySelector('button[data-tab="playlists"]')
+                     .click();
+                  return;
+               case "compendiumPacks":
+                  document
+                     .querySelector('button[data-tab="compendium"]')
+                     .click();
+                  return;
+               case "gameSettings":
+                  document.querySelector('button[data-tab="settings"]').click();
+                  return;
+            }
+         }
+
+         // Close the side bar if we opened it while changing the default tab
+         if (Object.entries(hideSideBarSettings).length) {
+            document
+               .querySelector('#sidebar button[data-tooltip="Collapse"]')
+               .click();
          }
       }
-   }
+   } catch {}
 };

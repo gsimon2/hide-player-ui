@@ -24,6 +24,7 @@ export const truthySettings = {
       audioPlaylists: true,
       compendiumPacks: true,
       gameSettings: true, 
+      maros: true
    },
    hidePlayers: true,
    hideHotbar: true,
@@ -57,6 +58,7 @@ export const falseySettings = {
       audioPlaylists: false,
       compendiumPacks: false,
       gameSettings: false,
+      macros: false
    },
    hidePlayers: false,
    hideHotbar: false,

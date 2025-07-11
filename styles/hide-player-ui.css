@@ -114,6 +114,10 @@
     display: none !important;
 }
 
+.hide-player-ui-macros #sidebar-tabs button[data-tab="macros"] {
+    display: none !important;
+}
+
 .hide-player-ui-audioPlaylists #sidebar-tabs button[data-tab="playlists"] {
     display: none !important;
 }
@@ -123,6 +127,10 @@
 }
 
 .hide-player-ui-gameSettings #sidebar-tabs button[data-tab="settings"] {
+    display: none !important;
+}
+
+.hide-player-ui-sidebarToggle #sidebar-tabs button[data-action="toggleState"] {
     display: none !important;
 }
 
