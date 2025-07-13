@@ -1,19 +1,24 @@
 /* Foundry Version 13 */
 .hide-player-ui.settings-form .form-group {
-   margin-top: 0.5rem; 
+   margin-top: 0.5rem;
    margin-bottom: 1rem;
 }
 
 .hide-player-ui.settings-form .warning-note {
-    text-align: center;
-    width: 350px;
-    margin: 0 auto;
+   text-align: center;
+   width: 350px;
+   margin: 0 auto;
+}
+
+.hide-player-ui.settings-form .docLink {
+   flex: 0 0 100%;
+   padding-bottom: 4px;
 }
 
 .hide-player-ui .sub-option-grouping {
-    margin-left: 1rem;
-    border-left: 1px solid #1c1c1c78;
-    padding-left: 0.5rem;
+   margin-left: 1rem;
+   border-left: 1px solid #1c1c1c78;
+   padding-left: 0.5rem;
 }
 
 .hide-player-ui .sub-sub-option-grouping {
@@ -23,47 +28,51 @@
 }
 
 .hide-player-ui .notes-second-line {
-    margin-top: -0.75rem;
+   margin-top: -0.75rem;
+}
+
+.hide-player-ui .notes-second-line {
+   margin-top: -0.75rem;
 }
 
 .hide-player-ui-hidden {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-controls #scene-controls {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-navigation #scene-navigation-expand {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-navigation #scene-navigation {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-navigation .monks-scene-navigation {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-navToggle #scene-navigation-expand {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sceneList #scene-navigation {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sceneList .monks-scene-navigation {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-bossBar .bossBar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sidebar #sidebar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sidebar #chat-message {
@@ -71,7 +80,7 @@
 }
 
 .hide-player-ui-chatLog #sidebar-tabs li:has(button[data-tab="chat"]) {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-chatInput #sidebar-content #chat #chat-form {
@@ -87,109 +96,120 @@
 }
 
 .hide-player-ui-combatTracker #sidebar-tabs li:has(button[data-tab="combat"]) {
-    display: none !important;
+   display: none !important;
 }
 
-.hide-player-ui-scenesDirectory #sidebar-tabs li:has(button[data-tab="scenes"]) {
-    display: none !important;
+.hide-player-ui-scenesDirectory
+   #sidebar-tabs
+   li:has(button[data-tab="scenes"]) {
+   display: none !important;
 }
 
-.hide-player-ui-actorsDirectory #sidebar-tabs li:has(button[data-tab="actors"]) {
-    display: none !important;
+.hide-player-ui-actorsDirectory
+   #sidebar-tabs
+   li:has(button[data-tab="actors"]) {
+   display: none !important;
 }
 
 .hide-player-ui-itemsDirectory #sidebar-tabs li:has(button[data-tab="items"]) {
-    display: none !important;
+   display: none !important;
 }
 
-.hide-player-ui-journalEntries #sidebar-tabs li:has(button[data-tab="journal"]) {
-    display: none !important;
+.hide-player-ui-journalEntries
+   #sidebar-tabs
+   li:has(button[data-tab="journal"]) {
+   display: none !important;
 }
 
 .hide-player-ui-rollableTables #sidebar-tabs li:has(button[data-tab="tables"]) {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-cardStacks #sidebar-tabs li:has(button[data-tab="cards"]) {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-macros #sidebar-tabs li:has(button[data-tab="macros"]) {
-    display: none !important;
+   display: none !important;
 }
 
-.hide-player-ui-audioPlaylists #sidebar-tabs li:has(button[data-tab="playlists"]) {
-    display: none !important;
+.hide-player-ui-audioPlaylists
+   #sidebar-tabs
+   li:has(button[data-tab="playlists"]) {
+   display: none !important;
 }
 
-.hide-player-ui-compendiumPacks #sidebar-tabs li:has(button[data-tab="compendium"]) {
-    display: none !important;
+.hide-player-ui-compendiumPacks
+   #sidebar-tabs
+   li:has(button[data-tab="compendium"]) {
+   display: none !important;
 }
 
 .hide-player-ui-gameSettings #sidebar-tabs li:has(button[data-tab="settings"]) {
-    display: none !important;
+   display: none !important;
 }
 
-.hide-player-ui-sidebarToggle #sidebar-tabs li:has(button[data-action="toggleState"]) {
-    display: none !important;
+.hide-player-ui-sidebarToggle
+   #sidebar-tabs
+   li:has(button[data-action="toggleState"]) {
+   display: none !important;
 }
 
 .hide-player-ui-players #players {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-hotbar #hotbar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-player-config .user-config {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-token-hud #token-hud {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-token-action-hud #token-action-hud {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-token-custom-hotbar #custom-hotbar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-token-custom-hotbar #hotbar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-dynamic-sized-sidebar #sidebar.collapsed {
-    height: auto !important;
+   height: auto !important;
 }
 
 .hide-player-ui-dynamic-sized-sidebar #sidebar-tabs {
-    justify-content: space-evenly;
+   justify-content: space-evenly;
 }
-
 
 /* LEGACY */
 /* Pre-version 13 */
 .hide-player-ui.settings-form .form-group {
-   margin-top: 0.5rem; 
+   margin-top: 0.5rem;
    margin-bottom: 1rem;
 }
 
 .hide-player-ui.settings-form .warning-note {
-    text-align: center;
-    width: 350px;
-    margin: 0 auto;
+   text-align: center;
+   width: 350px;
+   margin: 0 auto;
 }
 
 .hide-player-ui-hidden {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-logo #logo {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-logo .new-logo {
@@ -201,35 +221,35 @@
 }
 
 .hide-player-ui-navigation #navigation {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-navToggle #nav-toggle {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sceneList #scene-list {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sceneList .monks-scene-navigation {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-bossBar .bossBar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-controls #controls {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-sidebar #sidebar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-chatLog #sidebar-tabs a[data-tab="chat"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-chatInput #sidebar #chat #chat-form {
@@ -241,47 +261,47 @@
 }
 
 .hide-player-ui-combatTracker #sidebar-tabs a[data-tab="combat"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-scenesDirectory #sidebar-tabs a[data-tab="scenes"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-actorsDirectory #sidebar-tabs a[data-tab="actors"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-itemsDirectory #sidebar-tabs a[data-tab="items"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-journalEntries #sidebar-tabs a[data-tab="journal"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-rollableTables #sidebar-tabs a[data-tab="tables"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-cardStacks #sidebar-tabs a[data-tab="cards"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-audioPlaylists #sidebar-tabs a[data-tab="playlists"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-compendiumPacks #sidebar-tabs a[data-tab="compendium"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-gameSettings #sidebar-tabs a[data-tab="settings"] {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-players #players {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-players #ui-top {
@@ -289,33 +309,33 @@
 }
 
 .hide-player-ui-hotbar #hotbar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-player-config .user-config {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-token-hud #token-hud {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui-token-action-hud #token-action-hud {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-token-custom-hotbar #custom-hotbar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-token-custom-hotbar #hotbar {
-    display: none !important;
+   display: none !important;
 }
 
 .hide-player-ui .sub-option-grouping {
-    margin-left: 1rem;
-    border-left: 1px solid #1c1c1c78;
-    padding-left: 0.5rem;
+   margin-left: 1rem;
+   border-left: 1px solid #1c1c1c78;
+   padding-left: 0.5rem;
 }
 
 .hide-player-ui .sub-sub-option-grouping {
@@ -325,13 +345,13 @@
 }
 
 .hide-player-ui .notes-second-line {
-    margin-top: -0.75rem;
+   margin-top: -0.75rem;
 }
 
 .hide-player-ui-dynamic-sized-sidebar #sidebar.collapsed {
-    height: auto !important;
+   height: auto !important;
 }
 
 .hide-player-ui-dynamic-sized-sidebar #sidebar-tabs {
-    justify-content: space-evenly;
+   justify-content: space-evenly;
 }
