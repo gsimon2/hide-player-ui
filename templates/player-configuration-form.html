@@ -3,7 +3,8 @@
       {{localize "hide-player-ui.settings-form.toggle-all-checkboxes"}}
    </button>
    <form autocomplete="off" class="hide-player-ui settings-form">
-      {{#unless (logicalAnd playerUiOverridden settings.hideLogo) }}
+      {{#if renderFoundryLogoOption}} {{#unless (logicalAnd playerUiOverridden
+      settings.hideLogo) }}
       <div class="form-group">
          <label
             >{{localize "hide-player-ui.settings-form.hide-logo.label"}}</label
@@ -20,7 +21,7 @@
             {{localize "hide-player-ui.settings-form.hide-logo.notes"}}
          </p>
       </div>
-      {{/unless}}
+      {{/unless}} {{/if}}
 
       <div>
          {{#unless (logicalAnd playerUiOverridden
