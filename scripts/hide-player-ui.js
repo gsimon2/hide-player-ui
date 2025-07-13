@@ -13,8 +13,9 @@ const isSelectorValid = (selector) => {
 const handleCustomSelectors = (selectorText) => {
    const selectors = selectorText.split(";").map((s) => s.trim());
 
+   // In version 13 the sheet href migrated from "hide-player-ui" to "foundry2"
    const styleSheet = [...document.styleSheets].find((sheet) =>
-      sheet.href.includes("hide-player-ui")
+      sheet.href.includes("hide-player-ui") || sheet.href.includes('foundry2')
    );
 
    selectors
