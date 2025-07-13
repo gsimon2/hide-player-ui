@@ -55,6 +55,8 @@ export class HidePlayerUIPlayerConfigurationForm extends FormApplication {
             game.modules.get("custom-hotbar").active,
          renderBossBarOption:
             game.modules.get("bossbar") && game.modules.get("bossbar").active,
+         // Foundry logo no longer shown in UI starting v13
+         renderFoundryLogoOption: parseInt(game.version, 10) <= 12,
       };
 
       const data = foundry.utils.mergeObject(
