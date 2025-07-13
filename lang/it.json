@@ -125,7 +125,8 @@
             },
             "hide-css-by-css-selector": {
                "label": "Nascondi per selettori CSS",
-               "notes": "Nasconde gli elementi specificati dai selettori CSS. I selettori multipli devono essere delimitati da un punto e virgola (;)"
+               "notes": "Nasconde gli elementi specificati dai selettori CSS. I selettori multipli devono essere delimitati da un punto e virgola (;)",
+               "documentationLink": "Documentazione sui selettori CSS"
             }
         }
     }

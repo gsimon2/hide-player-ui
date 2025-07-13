@@ -125,7 +125,8 @@
             },
             "hide-css-by-css-selector": {
                "label": "Hide By CSS Selectors",
-               "notes": "Hides elements specified by CSS selectors. Multiple selectors should be delimited by a semi-colon (;)"
+               "notes": "Hides elements specified by CSS selectors. Multiple selectors should be delimited by a semi-colon (;)",
+               "documentationLink": "CSS selectors documentation"
             }
         }
     }
