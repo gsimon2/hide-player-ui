@@ -43,6 +43,11 @@
    display: none !important;
 }
 
+.hide-player-ui-controls #players {
+   position: absolute;
+   bottom: 1rem;
+}
+
 .hide-player-ui-navigation #scene-navigation-expand {
    display: none !important;
 }
